@@ -14,8 +14,8 @@
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"doQumentation","applicationCategory":"EducationalApplication","operatingSystem":"Web, Docker, Raspberry Pi","description":"Open-source frontend for IBM Quantum documentation with live Jupyter code execution, simulator mode, and offline support.","url":"https://doqumentation.org","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"license":"https://www.apache.org/licenses/LICENSE-2.0"}</script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
 <script src="https://unpkg.com/thebelab@0.4.0/lib/index.js" async></script><link rel="stylesheet" href="/assets/css/styles.09715444.css">
-<script src="/assets/js/runtime~main.c515cc48.js" defer="defer"></script>
-<script src="/assets/js/main.914e6c45.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.2b60214a.js" defer="defer"></script>
+<script src="/assets/js/main.e5852efc.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
 <svg style="display: none;"><defs>
@@ -173,7 +173,7 @@ Regulile implicite ale Python caută în directorul de lucru curent foarte devre
 <p>În contextul Qiskit 1.0, acest lucru se datorează probabil faptului că una dintre distribuțiile pe care încerci să le instalezi conține o cerință de genul <code>qiskit&lt;1.0</code>.
 Aceasta înseamnă că dezvoltatorii acelei distribuții au marcat-o ca nefiind (încă) compatibilă cu Qiskit 1.0.</p>
 <p>Poți (politicos) să îi întrebi pe acești dezvoltatori când vor lansa o versiune nouă a pachetului lor compatibilă cu Qiskit 1.0, dar mai întâi verifică dacă nu există deja un issue sau un pull request deschis care solicită acest lucru, oriunde acceptă ei comentarii.
-Ține cont că asta ia timp; te rugăm să le acorzi dezvoltatorilor cam o lună pentru a pregăti versiuni noi ale distribuțiilor lor!
+Ține cont că asta ia timp; te rog să le acorzi dezvoltatorilor cam o lună pentru a pregăti versiuni noi ale distribuțiilor lor!
 Până atunci, nu poți instala acea distribuție alături de Qiskit 1.0.
 Pentru a continua să folosești acea distribuție, creează un mediu virtual nou și folosește Qiskit 0.45 sau 0.46 (sau orice versiune este suportată) alături de celălalt pachet.</p>
 <div class="theme-admonition theme-admonition-caution admonition_xJq3 alert alert--warning"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8.893 1.5c-.183-.31-.52-.5-.887-.5s-.703.19-.886.5L.138 13.499a.98.98 0 0 0 0 1.001c.193.31.53.501.886.501h13.964c.367 0 .704-.19.877-.5a1.03 1.03 0 0 0 .01-1.002L8.893 1.5zm.133 11.497H6.987v-2.003h2.039v2.003zm0-3.004H6.987V5.987h2.039v4.006z"></path></svg></span>atenție</div><div class="admonitionContent_BuS1"><p>Dacă primești această eroare, <strong>nu</strong> încerca să construiești mediul apelând <code>pip install</code> de mai multe ori.
@@ -241,7 +241,7 @@ De obicei, aceasta se caracterizează prin faptul că dependentul se află la ce
 </li>
 <li class="">
 <p>Dependentul este un pachet care este menținut activ, dar nu suportă încă Qiskit 1.0.</p>
-<p>În acest caz, va trebui să aștepți ca dezvoltatorii să lanseze o versiune compatibilă — te rugăm să fii răbdător!
+<p>În acest caz, va trebui să aștepți ca dezvoltatorii să lanseze o versiune compatibilă — te rog să fii răbdător!
 De obicei, aceasta se caracterizează prin faptul că distribuția instalată <em>nu</em> este la cea mai recentă versiune a sa, chiar dacă comanda ta de instalare nu a specificat o versiune.
 Poți verifica cea mai recentă versiune a distribuției găsind pagina sa pe <a href="https://pypi.org/" target="_blank" rel="noopener noreferrer" class="">https://pypi.org/</a>.</p>
 <p><code>pip</code> a căutat probabil versiuni vechi ale pachetului până a găsit una (posibil de acum luni sau ani) care depindea doar de <code>qiskit-terra</code>.</p>
