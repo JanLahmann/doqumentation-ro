@@ -14,8 +14,8 @@
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"doQumentation","applicationCategory":"EducationalApplication","operatingSystem":"Web, Docker, Raspberry Pi","description":"Open-source frontend for IBM Quantum documentation with live Jupyter code execution, simulator mode, and offline support.","url":"https://doqumentation.org","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"license":"https://www.apache.org/licenses/LICENSE-2.0"}</script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
 <script src="https://unpkg.com/thebelab@0.4.0/lib/index.js" async></script><link rel="stylesheet" href="/assets/css/styles.09715444.css">
-<script src="/assets/js/runtime~main.872b6b50.js" defer="defer"></script>
-<script src="/assets/js/main.73d97792.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.2a426670.js" defer="defer"></script>
+<script src="/assets/js/main.f0423c43.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
 <svg style="display: none;"><defs>
@@ -47,6 +47,8 @@ O FHC utilă trebuie să satisfacă mai multe proprietăți-cheie:</p>
 <li class=""><strong>Ireversibilitate:</strong> O FHC este o <abbr title="O funcție matematică relativ ușor de calculat într-o direcție, dar extrem de dificil de inversat." style="text-decoration:underline dotted;text-underline-offset:2px;cursor:help"><em>funcție unidirecțională</em></abbr>, în sensul că, dat fiind un digest, ar trebui să fie imposibil în practică să inversezi hashing-ul și să obții intrarea.</li>
 <li class=""><strong>Injectivitate aproximativă:</strong> Deși FHC-urile sunt funcții mai-mulți-la-unul, ele ar trebui să pară funcții unu-la-unu. Acest lucru se realizează prin combinarea unui spațiu de ieșire de dimensiuni enorme cu efectul de avalanșă, prin care modificările minuscule ale intrării conduc la digesturi complet diferite. Această caracteristică este cunoscută drept injectivitate aproximativă.</li>
 </ol>
+<p><img decoding="async" loading="lazy" alt="Fig 2: Digital signatures" src="/assets/images/digital-signature-f30b9f1a727ed5ce7e5c45f780a514fe.svg" width="1259" height="523" class="img_ev3q"></p>
+<p><img decoding="async" loading="lazy" alt="Fig 1: Secure hashing for data integrity checks" src="/assets/images/data-integrity-89f9ea689b46a867d9b3f39648f50cba.svg" width="983" height="445" class="img_ev3q"></p>
 <p>Dată fiind aceasta, este posibil să validezi o bucată de date față de instanța originală comparând un digest al datelor cu un digest al originalului.</p>
 <ul>
 <li class="">Dacă cele două digesturi coincid, putem fi convinși cu probabilitate ridicată că datele sunt identice cu originalul.</li>
