@@ -15,8 +15,8 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
 <script src="https://unpkg.com/thebelab@0.4.0/lib/index.js" async></script>
 <script src="https://cloud.umami.is/script.js" defer="defer" data-website-id="97f347ac-e7ba-4be3-b26f-ab4b328bdbf2" data-domains="doqumentation.org"></script><link rel="stylesheet" href="/assets/css/styles.e55021e4.css">
-<script src="/assets/js/runtime~main.0f40c68e.js" defer="defer"></script>
-<script src="/assets/js/main.7f93b15a.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.780ace08.js" defer="defer"></script>
+<script src="/assets/js/main.278c8ed9.js" defer="defer"></script>
 <link data-rh-hreflang rel="alternate" hreflang="en" href="https://doqumentation.org/guides/qiskit-2.0" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://de.doqumentation.org/guides/qiskit-2.0" /><link data-rh-hreflang rel="alternate" hreflang="es" href="https://es.doqumentation.org/guides/qiskit-2.0" /><link data-rh-hreflang rel="alternate" hreflang="fr" href="https://fr.doqumentation.org/guides/qiskit-2.0" /><link data-rh-hreflang rel="alternate" hreflang="it" href="https://it.doqumentation.org/guides/qiskit-2.0" /><link data-rh-hreflang rel="alternate" hreflang="pt" href="https://pt.doqumentation.org/guides/qiskit-2.0" /><link data-rh-hreflang rel="alternate" hreflang="ja" href="https://ja.doqumentation.org/guides/qiskit-2.0" /><link data-rh-hreflang rel="alternate" hreflang="fil" href="https://tl.doqumentation.org/guides/qiskit-2.0" /><link data-rh-hreflang rel="alternate" hreflang="ar" href="https://ar.doqumentation.org/guides/qiskit-2.0" /><link data-rh-hreflang rel="alternate" hreflang="he" href="https://he.doqumentation.org/guides/qiskit-2.0" /><link data-rh-hreflang rel="alternate" hreflang="ms" href="https://ms.doqumentation.org/guides/qiskit-2.0" /><link data-rh-hreflang rel="alternate" hreflang="id" href="https://id.doqumentation.org/guides/qiskit-2.0" /><link data-rh-hreflang rel="alternate" hreflang="th" href="https://th.doqumentation.org/guides/qiskit-2.0" /><link data-rh-hreflang rel="alternate" hreflang="ko" href="https://ko.doqumentation.org/guides/qiskit-2.0" /><link data-rh-hreflang rel="alternate" hreflang="pl" href="https://pl.doqumentation.org/guides/qiskit-2.0" /><link data-rh-hreflang rel="alternate" hreflang="ro" href="https://ro.doqumentation.org/guides/qiskit-2.0" /><link data-rh-hreflang rel="alternate" hreflang="uk" href="https://uk.doqumentation.org/guides/qiskit-2.0" /><link data-rh-hreflang rel="alternate" hreflang="cs" href="https://cs.doqumentation.org/guides/qiskit-2.0" /><link data-rh-hreflang rel="alternate" hreflang="swg" href="https://swg.doqumentation.org/guides/qiskit-2.0" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://bad.doqumentation.org/guides/qiskit-2.0" /><link data-rh-hreflang rel="alternate" hreflang="bar" href="https://bar.doqumentation.org/guides/qiskit-2.0" /><link data-rh-hreflang rel="alternate" hreflang="ksh" href="https://ksh.doqumentation.org/guides/qiskit-2.0" /><link data-rh-hreflang rel="alternate" hreflang="nds" href="https://nds.doqumentation.org/guides/qiskit-2.0" /><link data-rh-hreflang rel="alternate" hreflang="gsw" href="https://gsw.doqumentation.org/guides/qiskit-2.0" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://sax.doqumentation.org/guides/qiskit-2.0" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://bln.doqumentation.org/guides/qiskit-2.0" /><link data-rh-hreflang rel="alternate" hreflang="de-AT" href="https://aut.doqumentation.org/guides/qiskit-2.0" /><link data-rh-hreflang rel="alternate" hreflang="x-default" href="https://doqumentation.org/guides/qiskit-2.0" /></head>
 <body>
 <svg style="display: none;"><defs>
@@ -128,15 +128,33 @@ Transpiler-ului, iar modulul complet <code>qiskit.pulse</code> a fost eliminat.<
 <p>Modulul <code>qiskit.pulse</code> a fost eliminat complet din Qiskit, fără înlocuitor.
 Aceasta include elementele asociate:</p>
 <ul>
-<li class="">proprietatea <code>calibrations</code> a obiectelor <a href="https://docs.quantum.ibm.com/api/qiskit/qiskit.circuit.QuantumCircuit" target="_blank" rel="noopener noreferrer" class=""><code>QuantumCircuit</code></a>, <a href="https://docs.quantum.ibm.com/api/qiskit/qiskit.dagcircuit.DAGCircuit" target="_blank" rel="noopener noreferrer" class=""><code>DAGCircuit</code></a> și <a href="https://docs.quantum.ibm.com/api/qiskit/qiskit.dagcircuit.DAGDependency" target="_blank" rel="noopener noreferrer" class=""><code>DAGDependency</code></a>.</li>
-<li class="">metodele <code>has_calibration_for</code> și <code>add_calibration</code> ale <a href="https://docs.quantum.ibm.com/api/qiskit/qiskit.circuit.QuantumCircuit" target="_blank" rel="noopener noreferrer" class=""><code>QuantumCircuit</code></a>.</li>
-<li class="">metoda <code>has_calibration_for</code> a <a href="https://docs.quantum.ibm.com/api/qiskit/qiskit.dagcircuit.DAGCircuit" target="_blank" rel="noopener noreferrer" class=""><code>DAGCircuit</code></a>.</li>
-<li class="">pasele Transpiler-ului <code>PulseGates</code>, <code>RXCalibrationBuilder</code>, <code>RZXCalibrationBuilder</code>, <code>EchoRZXWeylDecomposition</code>, <code>ValidatePulseGates</code>.</li>
-<li class="">modulul <code>qiskit.scheduler</code> și tot conținutul său.</li>
-<li class="">metodele <code>instruction_schedule_map</code>, <code>drive_channel</code>, <code>measure_channel</code>, <code>acquire_channel</code> și <code>control_channel</code> ale <a href="https://docs.quantum.ibm.com/api/qiskit/qiskit.providers.BackendV2" target="_blank" rel="noopener noreferrer" class=""><code>BackendV2</code></a>.</li>
-<li class="">metodele <code>has_calibration</code>, <code>get_calibration</code>, <code>instruction_schedule_map</code> și <code>update_from_instruction_schedule_map</code> ale <a href="https://docs.quantum.ibm.com/api/qiskit/qiskit.transpiler.Target" target="_blank" rel="noopener noreferrer" class=""><code>Target</code></a>.</li>
-<li class="">argumentul <code>inst_map</code> al <a href="https://docs.quantum.ibm.com/api/qiskit/qiskit.transpiler.generate_preset_pass_manager" target="_blank" rel="noopener noreferrer" class=""><code>generate_preset_pass_manager</code></a>, <a href="https://docs.quantum.ibm.com/api/qiskit/compiler#transpile" target="_blank" rel="noopener noreferrer" class=""><code>transpile</code></a> și <a href="https://docs.quantum.ibm.com/api/qiskit/qiskit.transpiler.Target#qiskit.transpiler.Target.from_configuration" target="_blank" rel="noopener noreferrer" class=""><code>Target.from_configuration</code></a>.</li>
-<li class="">câmpul <code>calibration</code> al <a href="https://docs.quantum.ibm.com/api/qiskit/qiskit.transpiler.InstructionProperties" target="_blank" rel="noopener noreferrer" class=""><code>InstructionProperties</code></a>.</li>
+<li class="">
+<p>proprietatea <code>calibrations</code> a obiectelor <a href="https://docs.quantum.ibm.com/api/qiskit/qiskit.circuit.QuantumCircuit" target="_blank" rel="noopener noreferrer" class=""><code>QuantumCircuit</code></a>, <a href="https://docs.quantum.ibm.com/api/qiskit/qiskit.dagcircuit.DAGCircuit" target="_blank" rel="noopener noreferrer" class=""><code>DAGCircuit</code></a> și <a href="https://docs.quantum.ibm.com/api/qiskit/qiskit.dagcircuit.DAGDependency" target="_blank" rel="noopener noreferrer" class=""><code>DAGDependency</code></a>.</p>
+</li>
+<li class="">
+<p>metodele <code>has_calibration_for</code> și <code>add_calibration</code> ale <a href="https://docs.quantum.ibm.com/api/qiskit/qiskit.circuit.QuantumCircuit" target="_blank" rel="noopener noreferrer" class=""><code>QuantumCircuit</code></a>.</p>
+</li>
+<li class="">
+<p>metoda <code>has_calibration_for</code> a <a href="https://docs.quantum.ibm.com/api/qiskit/qiskit.dagcircuit.DAGCircuit" target="_blank" rel="noopener noreferrer" class=""><code>DAGCircuit</code></a>.</p>
+</li>
+<li class="">
+<p>pasele Transpiler-ului <code>PulseGates</code>, <code>RXCalibrationBuilder</code>, <code>RZXCalibrationBuilder</code>, <code>EchoRZXWeylDecomposition</code>, <code>ValidatePulseGates</code>.</p>
+</li>
+<li class="">
+<p>modulul <code>qiskit.scheduler</code> și tot conținutul său.</p>
+</li>
+<li class="">
+<p>metodele <code>instruction_schedule_map</code>, <code>drive_channel</code>, <code>measure_channel</code>, <code>acquire_channel</code> și <code>control_channel</code> ale <a href="https://docs.quantum.ibm.com/api/qiskit/qiskit.providers.BackendV2" target="_blank" rel="noopener noreferrer" class=""><code>BackendV2</code></a>.</p>
+</li>
+<li class="">
+<p>metodele <code>has_calibration</code>, <code>get_calibration</code>, <code>instruction_schedule_map</code> și <code>update_from_instruction_schedule_map</code> ale <a href="https://docs.quantum.ibm.com/api/qiskit/qiskit.transpiler.Target" target="_blank" rel="noopener noreferrer" class=""><code>Target</code></a>.</p>
+</li>
+<li class="">
+<p>argumentul <code>inst_map</code> al <a href="https://docs.quantum.ibm.com/api/qiskit/qiskit.transpiler.generate_preset_pass_manager" target="_blank" rel="noopener noreferrer" class=""><code>generate_preset_pass_manager</code></a>, <a href="https://docs.quantum.ibm.com/api/qiskit/compiler#transpile" target="_blank" rel="noopener noreferrer" class=""><code>transpile</code></a> și <a href="https://docs.quantum.ibm.com/api/qiskit/qiskit.transpiler.Target#qiskit.transpiler.Target.from_configuration" target="_blank" rel="noopener noreferrer" class=""><code>Target.from_configuration</code></a>.</p>
+</li>
+<li class="">
+<p>câmpul <code>calibration</code> al <a href="https://docs.quantum.ibm.com/api/qiskit/qiskit.transpiler.InstructionProperties" target="_blank" rel="noopener noreferrer" class=""><code>InstructionProperties</code></a>.</p>
+</li>
 </ul>
 <p>Aceasta s-a întâmplat deoarece QPU-urile IBM Quantum® au încetat să ofere acces la nivel de pulsuri, iar echipa Qiskit nu mai dispunea de resursele necesare pentru a menține pachetul puțin utilizat.
 Poți continua să folosești modulul <code>qiskit.pulse</code> în timp ce utilizezi seria v1.x a Qiskit, care beneficiază de suport pentru remedieri de erori până în septembrie 2024 și suport de securitate până în martie 2025, dar modulul a fost eliminat din seria v2.x.</p>

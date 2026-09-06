@@ -15,8 +15,8 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
 <script src="https://unpkg.com/thebelab@0.4.0/lib/index.js" async></script>
 <script src="https://cloud.umami.is/script.js" defer="defer" data-website-id="97f347ac-e7ba-4be3-b26f-ab4b328bdbf2" data-domains="doqumentation.org"></script><link rel="stylesheet" href="/assets/css/styles.e55021e4.css">
-<script src="/assets/js/runtime~main.0f40c68e.js" defer="defer"></script>
-<script src="/assets/js/main.7f93b15a.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.780ace08.js" defer="defer"></script>
+<script src="/assets/js/main.278c8ed9.js" defer="defer"></script>
 <link data-rh-hreflang rel="alternate" hreflang="en" href="https://doqumentation.org/guides/qrmi" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://de.doqumentation.org/guides/qrmi" /><link data-rh-hreflang rel="alternate" hreflang="es" href="https://es.doqumentation.org/guides/qrmi" /><link data-rh-hreflang rel="alternate" hreflang="fr" href="https://fr.doqumentation.org/guides/qrmi" /><link data-rh-hreflang rel="alternate" hreflang="it" href="https://it.doqumentation.org/guides/qrmi" /><link data-rh-hreflang rel="alternate" hreflang="pt" href="https://pt.doqumentation.org/guides/qrmi" /><link data-rh-hreflang rel="alternate" hreflang="ja" href="https://ja.doqumentation.org/guides/qrmi" /><link data-rh-hreflang rel="alternate" hreflang="fil" href="https://tl.doqumentation.org/guides/qrmi" /><link data-rh-hreflang rel="alternate" hreflang="ar" href="https://ar.doqumentation.org/guides/qrmi" /><link data-rh-hreflang rel="alternate" hreflang="he" href="https://he.doqumentation.org/guides/qrmi" /><link data-rh-hreflang rel="alternate" hreflang="ms" href="https://ms.doqumentation.org/guides/qrmi" /><link data-rh-hreflang rel="alternate" hreflang="id" href="https://id.doqumentation.org/guides/qrmi" /><link data-rh-hreflang rel="alternate" hreflang="th" href="https://th.doqumentation.org/guides/qrmi" /><link data-rh-hreflang rel="alternate" hreflang="ko" href="https://ko.doqumentation.org/guides/qrmi" /><link data-rh-hreflang rel="alternate" hreflang="pl" href="https://pl.doqumentation.org/guides/qrmi" /><link data-rh-hreflang rel="alternate" hreflang="ro" href="https://ro.doqumentation.org/guides/qrmi" /><link data-rh-hreflang rel="alternate" hreflang="uk" href="https://uk.doqumentation.org/guides/qrmi" /><link data-rh-hreflang rel="alternate" hreflang="cs" href="https://cs.doqumentation.org/guides/qrmi" /><link data-rh-hreflang rel="alternate" hreflang="swg" href="https://swg.doqumentation.org/guides/qrmi" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://bad.doqumentation.org/guides/qrmi" /><link data-rh-hreflang rel="alternate" hreflang="bar" href="https://bar.doqumentation.org/guides/qrmi" /><link data-rh-hreflang rel="alternate" hreflang="ksh" href="https://ksh.doqumentation.org/guides/qrmi" /><link data-rh-hreflang rel="alternate" hreflang="nds" href="https://nds.doqumentation.org/guides/qrmi" /><link data-rh-hreflang rel="alternate" hreflang="gsw" href="https://gsw.doqumentation.org/guides/qrmi" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://sax.doqumentation.org/guides/qrmi" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://bln.doqumentation.org/guides/qrmi" /><link data-rh-hreflang rel="alternate" hreflang="de-AT" href="https://aut.doqumentation.org/guides/qrmi" /><link data-rh-hreflang rel="alternate" hreflang="x-default" href="https://doqumentation.org/guides/qrmi" /></head>
 <body>
 <svg style="display: none;"><defs>
@@ -35,35 +35,65 @@
 <div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><div class="token-line" style="color:#393A34"><span class="token plain">AlmaLinux 9, Amazon Linux 2023, CentOS Stream 9, CentOS Stream 10, </span><br></div><div class="token-line" style="color:#393A34"><span class="token plain">RedHat Enterprise Linux 8, RedHat Enterprise Linux 9, </span><br></div><div class="token-line" style="color:#393A34"><span class="token plain">RedHat Enterprise Linux 10, Rocky Linux 8, Rocky Linux 9, SuSE 15, </span><br></div><div class="token-line" style="color:#393A34"><span class="token plain">Ubuntu 22.04, Ubuntu 24.04, MacOS Sequoia 15.1 or above</span><br></div></code></pre></div></div>
 <h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="compiling-environment">Mediu de compilare<a href="#compiling-environment" class="hash-link" aria-label="Link direct către Mediu de compilare" title="Link direct către Mediu de compilare" translate="no">​</a></h4>
 <ul>
-<li class=""><a href="https://www.rust-lang.org/tools/install" target="_blank" rel="noopener noreferrer" class="">Compilator Rust</a> 1.91 sau mai nou</li>
-<li class="">Un compilator C: de exemplu, GCC (<code>gcc</code>) pe Linux și Clang (<code>clang-tools-extra</code>) pentru targeturi Rust necunoscute/compilări încrucișate. QRMI este compatibil cu un compilator conform standardului C11</li>
-<li class=""><code>make/cmake</code> (RPM-ul make/cmake pentru OS-uri compatibile RHEL)</li>
-<li class=""><code>openssl</code> (RPM-ul openssl-devel pentru OS-uri compatibile RHEL)</li>
-<li class=""><code>zlib</code> (RPM-ul zlib-devel pentru OS-uri compatibile RHEL)</li>
-<li class="">Python 3.11, 3.12 sau 3.13 (pentru API-ul Python)<!-- -->
+<li class="">
+<p><a href="https://www.rust-lang.org/tools/install" target="_blank" rel="noopener noreferrer" class="">Compilator Rust</a> 1.91 sau mai nou</p>
+</li>
+<li class="">
+<p>Un compilator C: de exemplu, GCC (<code>gcc</code>) pe Linux și Clang (<code>clang-tools-extra</code>) pentru targeturi Rust necunoscute/compilări încrucișate. QRMI este compatibil cu un compilator conform standardului C11</p>
+</li>
+<li class="">
+<p><code>make/cmake</code> (RPM-ul make/cmake pentru OS-uri compatibile RHEL)</p>
+</li>
+<li class="">
+<p><code>openssl</code> (RPM-ul openssl-devel pentru OS-uri compatibile RHEL)</p>
+</li>
+<li class="">
+<p><code>zlib</code> (RPM-ul zlib-devel pentru OS-uri compatibile RHEL)</p>
+</li>
+<li class="">
+<p>Python 3.11, 3.12 sau 3.13 (pentru API-ul Python)</p>
 <ul>
-<li class="">Biblioteci și fișiere antet necesare pentru dezvoltarea Python (RPM-ul python3.1x-devel pentru OS-uri compatibile RHEL):<!-- -->
+<li class="">
+<p>Biblioteci și fișiere antet necesare pentru dezvoltarea Python (RPM-ul python3.1x-devel pentru OS-uri compatibile RHEL):</p>
 <ul>
-<li class="">/usr/include/python3.1x</li>
-<li class="">/usr/lib64/libpython3.1x.so</li>
-</ul>
+<li class="">
+<p>/usr/include/python3.1x</p>
+</li>
+<li class="">
+<p>/usr/lib64/libpython3.1x.so</p>
 </li>
 </ul>
 </li>
-<li class="">Doxygen (pentru generarea documentației API C), în funcție de OS:<!-- -->
+</ul>
+</li>
+<li class="">
+<p>Doxygen (pentru generarea documentației API C), în funcție de OS:</p>
 <ul>
-<li class=""><code>dnf install doxygen</code> pentru Linux (RHEL/CentOS/Rocky Linux și altele)</li>
-<li class=""><code>apt install doxygen</code> pentru Linux (Ubuntu și altele)</li>
-<li class=""><code>brew install doxygen</code>pentru MacOS</li>
+<li class="">
+<p><code>dnf install doxygen</code> for Linux (RHEL/CentOS/Rocky Linux and others)</p>
+</li>
+<li class="">
+<p><code>apt install doxygen</code> for Linux (Ubuntu and others)</p>
+</li>
+<li class="">
+<p><code>brew install doxygen</code>for MacOS</p>
+</li>
 </ul>
 </li>
 </ul>
 <h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="runtime-environment">Mediu de execuție<a href="#runtime-environment" class="hash-link" aria-label="Link direct către Mediu de execuție" title="Link direct către Mediu de execuție" translate="no">​</a></h4>
 <ul>
-<li class="">gcc (RPM-ul libgcc pentru OS-uri compatibile RHEL)</li>
-<li class="">openssl (RPM-ul openssl-libs pentru OS-uri compatibile RHEL)</li>
-<li class="">zlib (RPM-ul zlib pentru OS-uri compatibile RHEL)</li>
-<li class="">Python 3.11, 3.12 sau 3.13 (pentru API-ul Python)<!-- -->
+<li class="">
+<p>gcc (RPM-ul libgcc pentru OS-uri compatibile RHEL)</p>
+</li>
+<li class="">
+<p>openssl (RPM-ul openssl-libs pentru OS-uri compatibile RHEL)</p>
+</li>
+<li class="">
+<p>zlib (RPM-ul zlib pentru OS-uri compatibile RHEL)</p>
+</li>
+<li class="">
+<p>Python 3.11, 3.12 sau 3.13 (pentru API-ul Python)</p>
 <ul>
 <li class="">Biblioteci și fișiere antet necesare pentru dezvoltarea Python (RPM-ul python3.1x-devel pentru OS-uri compatibile RHEL)</li>
 </ul>

@@ -15,8 +15,8 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
 <script src="https://unpkg.com/thebelab@0.4.0/lib/index.js" async></script>
 <script src="https://cloud.umami.is/script.js" defer="defer" data-website-id="97f347ac-e7ba-4be3-b26f-ab4b328bdbf2" data-domains="doqumentation.org"></script><link rel="stylesheet" href="/assets/css/styles.e55021e4.css">
-<script src="/assets/js/runtime~main.0f40c68e.js" defer="defer"></script>
-<script src="/assets/js/main.7f93b15a.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.780ace08.js" defer="defer"></script>
+<script src="/assets/js/main.278c8ed9.js" defer="defer"></script>
 <link data-rh-hreflang rel="alternate" hreflang="en" href="https://doqumentation.org/workshop/divincenzo_criteria_lab-2" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://de.doqumentation.org/workshop/divincenzo_criteria_lab-2" /><link data-rh-hreflang rel="alternate" hreflang="es" href="https://es.doqumentation.org/workshop/divincenzo_criteria_lab-2" /><link data-rh-hreflang rel="alternate" hreflang="fr" href="https://fr.doqumentation.org/workshop/divincenzo_criteria_lab-2" /><link data-rh-hreflang rel="alternate" hreflang="it" href="https://it.doqumentation.org/workshop/divincenzo_criteria_lab-2" /><link data-rh-hreflang rel="alternate" hreflang="pt" href="https://pt.doqumentation.org/workshop/divincenzo_criteria_lab-2" /><link data-rh-hreflang rel="alternate" hreflang="ja" href="https://ja.doqumentation.org/workshop/divincenzo_criteria_lab-2" /><link data-rh-hreflang rel="alternate" hreflang="fil" href="https://tl.doqumentation.org/workshop/divincenzo_criteria_lab-2" /><link data-rh-hreflang rel="alternate" hreflang="ar" href="https://ar.doqumentation.org/workshop/divincenzo_criteria_lab-2" /><link data-rh-hreflang rel="alternate" hreflang="he" href="https://he.doqumentation.org/workshop/divincenzo_criteria_lab-2" /><link data-rh-hreflang rel="alternate" hreflang="ms" href="https://ms.doqumentation.org/workshop/divincenzo_criteria_lab-2" /><link data-rh-hreflang rel="alternate" hreflang="id" href="https://id.doqumentation.org/workshop/divincenzo_criteria_lab-2" /><link data-rh-hreflang rel="alternate" hreflang="th" href="https://th.doqumentation.org/workshop/divincenzo_criteria_lab-2" /><link data-rh-hreflang rel="alternate" hreflang="ko" href="https://ko.doqumentation.org/workshop/divincenzo_criteria_lab-2" /><link data-rh-hreflang rel="alternate" hreflang="pl" href="https://pl.doqumentation.org/workshop/divincenzo_criteria_lab-2" /><link data-rh-hreflang rel="alternate" hreflang="ro" href="https://ro.doqumentation.org/workshop/divincenzo_criteria_lab-2" /><link data-rh-hreflang rel="alternate" hreflang="uk" href="https://uk.doqumentation.org/workshop/divincenzo_criteria_lab-2" /><link data-rh-hreflang rel="alternate" hreflang="cs" href="https://cs.doqumentation.org/workshop/divincenzo_criteria_lab-2" /><link data-rh-hreflang rel="alternate" hreflang="swg" href="https://swg.doqumentation.org/workshop/divincenzo_criteria_lab-2" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://bad.doqumentation.org/workshop/divincenzo_criteria_lab-2" /><link data-rh-hreflang rel="alternate" hreflang="bar" href="https://bar.doqumentation.org/workshop/divincenzo_criteria_lab-2" /><link data-rh-hreflang rel="alternate" hreflang="ksh" href="https://ksh.doqumentation.org/workshop/divincenzo_criteria_lab-2" /><link data-rh-hreflang rel="alternate" hreflang="nds" href="https://nds.doqumentation.org/workshop/divincenzo_criteria_lab-2" /><link data-rh-hreflang rel="alternate" hreflang="gsw" href="https://gsw.doqumentation.org/workshop/divincenzo_criteria_lab-2" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://sax.doqumentation.org/workshop/divincenzo_criteria_lab-2" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://bln.doqumentation.org/workshop/divincenzo_criteria_lab-2" /><link data-rh-hreflang rel="alternate" hreflang="de-AT" href="https://aut.doqumentation.org/workshop/divincenzo_criteria_lab-2" /><link data-rh-hreflang rel="alternate" hreflang="x-default" href="https://doqumentation.org/workshop/divincenzo_criteria_lab-2" /></head>
 <body>
 <svg style="display: none;"><defs>
@@ -28,11 +28,21 @@
 <p>Fizicianul David DiVincenzo a conturat cinci cerințe esențiale pentru orice implementare fizică a unui calculator cuantic, plus două criterii suplimentare pentru comunicații cuantice. În acest notebook, vom <strong>experimenta fiecare criteriu DiVincenzo prin demonstrații practice în Qiskit</strong>. În loc să intrăm adânc în teorie, fiecare secțiune explică pe scurt un criteriu și oferă apoi exerciții de cod folosind Qiskit 2. Vei putea rula Circuit-uri pe simulatoare și dispozitive reale IBM Quantum pentru a <strong>explora fiecare principiu în mod practic</strong>.</p>
 <p><strong>Cele Cinci Criterii DiVincenzo pentru Calculul Cuantic</strong>:</p>
 <ol>
-<li class=""><strong>Un sistem fizic scalabil cu Qubiți bine caracterizați.</strong></li>
-<li class=""><strong>Capacitatea de a inițializa Qubiții</strong> la o stare fiducială simplă (de ex. |00…0〉).</li>
-<li class=""><strong>Timpi lungi de decoerență</strong> (coerența Qubitului mult mai lungă decât timpul de operare al poartă-ului).</li>
-<li class=""><strong>Un set universal de poartă-uri cuantice</strong> (capabil să efectueze operații unitare arbitrare).</li>
-<li class=""><strong>Capacitate de măsurare specifică Qubitului</strong> (citirea stării fiecărui qubit).</li>
+<li class="">
+<p><strong>Un sistem fizic scalabil cu Qubiți bine caracterizați.</strong></p>
+</li>
+<li class="">
+<p><strong>Capacitatea de a inițializa Qubiții</strong> la o stare fiducială simplă (de ex. |00…0〉).</p>
+</li>
+<li class="">
+<p><strong>Timpi lungi de decoerență</strong> (coerența Qubitului mult mai lungă decât timpul de operare al poartă-ului).</p>
+</li>
+<li class="">
+<p><strong>Un set universal de poartă-uri cuantice</strong> (capabil să efectueze operații unitare arbitrare).</p>
+</li>
+<li class="">
+<p><strong>Capacitate de măsurare specifică Qubitului</strong> (citirea stării fiecărui qubit).</p>
+</li>
 </ol>
 <p><em>(DiVincenzo a descris și două criterii pentru comunicații cuantice: capacitatea de a interconverta Qubiții staționari cu cei „zburători&quot; și de a transmite Qubiții zburători în mod fidel între locații. Le includem într-o activitate recomandată la sfârșitul acestui notebook.)</em></p>
 <p>Fiecare dintre secțiunile următoare corespunde unui criteriu. Vom folosi Qiskit pentru a ilustra conceptul cu cod și <strong>experimente interactive</strong> pe care le poți încerca. De exemplu, vom vedea cum scalarea numărului de Qubiți și a adâncimii Circuit-ului afectează rezultatele (Criteriul 1), cum să resetezi și să pregătești stările Qubiților (Criteriul 2), cum să măsori Qubiții pe simulatoare vs dispozitive reale (Criteriul 4), cum compune Qiskit Gate-uri universale (Criteriul 3) și cum coerența finită (T₁, T₂) influențează calculele (Criteriul 5). La final, vei dobândi o intuiție mai profundă despre ce înseamnă în practică fiecare criteriu DiVincenzo și cum Qiskit permite experimentarea cu acestea.</p>
@@ -149,22 +159,36 @@ Ar trebui să observi că probabilitatea <code>P(qubit=1)</code> scade pe măsur
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="quantum-communication-criteria-flying-qubits">Criteriile Comunicării Cuantice (Qubiți Zburători)<a href="#quantum-communication-criteria-flying-qubits" class="hash-link" aria-label="Link direct către Criteriile Comunicării Cuantice (Qubiți Zburători)" title="Link direct către Criteriile Comunicării Cuantice (Qubiți Zburători)" translate="no">​</a></h2>
 <p>DiVincenzo a mai listat două criterii specifice comunicării cuantice, importante dacă se construiește un calculator cuantic în rețea:</p>
 <ol start="6">
-<li class=""><strong>Capacitatea de a interconverta qubiți staționari și zburători.</strong> (De ex., maparea unui qubit dintr-un procesor pe un foton care poate călători.)</li>
-<li class=""><strong>Capacitatea de a transmite fidel qubiți zburători între locații.</strong> (De ex., trimiterea unui foton qubit printr-o fibră fără pierderea informației cuantice.)</li>
+<li class="">
+<p><strong>Capacitatea de a interconverta qubiți staționari și zburători.</strong> (De ex., maparea unui qubit dintr-un procesor pe un foton care poate călători.)</p>
+</li>
+<li class="">
+<p><strong>Capacitatea de a transmite fidel qubiți zburători între locații.</strong> (De ex., trimiterea unui foton qubit printr-o fibră fără pierderea informației cuantice.)</p>
+</li>
 </ol>
 <p>Acestea depășesc utilizarea standard a Qiskit, deoarece Qiskit se ocupă în principal de qubiți staționari pe un cip. Cu toate acestea, putem ilustra <em>conceptul</em> acestor criterii cu un exemplu simplu: <strong>teleportarea cuantică</strong>. Teleportarea arată conversia stării unui qubit staționar în informații transportate de o pereche împletită (partea „zburătoare&quot;) și comunicare clasică, care este apoi utilizată pentru a reconstitui starea pe un alt qubit staționar din altă locație.</p>
 <h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="recommended-activity-take-the-qiskit-in-classrooms-quantum-teleportation-module">Activitate recomandată: Parcurge modulul <em>Quantum Teleportation</em> din Qiskit in Classrooms<a href="#recommended-activity-take-the-qiskit-in-classrooms-quantum-teleportation-module" class="hash-link" aria-label="Link direct către recommended-activity-take-the-qiskit-in-classrooms-quantum-teleportation-module" title="Link direct către recommended-activity-take-the-qiskit-in-classrooms-quantum-teleportation-module" translate="no">​</a></h3>
 <p>Modulul <a href="https://quantum.cloud.ibm.com/learning/en/modules/computer-science/quantum-teleportation" target="_blank" rel="noopener noreferrer" class="">Quantum Teleportation</a> din Qiskit in Classrooms, realizat de Dr. Katie McCormick, te va ghida prin unul dintre cele mai fascinante protocoale din informația cuantică: teleportarea cuantică, prin care o stare cuantică (un qubit) este trimisă de la Alice la Bob folosind împletire și doar doi biți clasici. Vei învăța procedura completă de teleportare pas cu pas — cum să pregătești perechea Bell împletită, cum să efectuezi o măsurare în baza Bell de partea lui Alice, cum să transmiți rezultatele clasice și cum să aplici poarta cuantică corectă pe qubit-ul lui Bob pentru a recupera perfect starea originală. Pe parcurs, vei explora de ce teleportarea informației unui qubit nu încalcă teorema de non-clonare și nici nu depășește viteza luminii. Prin exerciții practice folosind hardware-ul IBM Quantum sau simulatoare, vei dobândi o înțelegere practică a măsurătorilor, a împletirii și a controlului feed-forward în acțiune.</p>
-<p>Stăpânind teleportarea cuantică, vei înțelege cum să codifici, transmiți și recuperezi informații cuantice între noduri distincte — punând bazele pentru rețele cuantice, sisteme de repetoare, scheme de comunicare securizată și calcul cuantic modular scalabil.</p>
-<p><strong>Cum se leagă aceasta de criteriile 6 &amp; 7:</strong> Într-o rețea cuantică reală, perechea împletită partajată ar fi creată prin distribuirea qubiților „zburători&quot; (cum ar fi fotonii) între locațiile lui Alice și Bob (Criteriul 7: transmisie fidelă). Protocolul de teleportare în sine servește apoi ca o modalitate de a mapa starea qubitului staționar al lui Alice pe jumătatea sa din perechea împletită, „trimițând&quot; efectiv starea la Bob (Criteriul 6: interconversie). Qiskit ne permite să simulăm perfect logica protocolului, oferind un model conceptual pentru modul în care aceste criterii sunt îndeplinite în arhitecturile de comunicare.</p>
+<p>Stăpânind teleportarea cuantică, vei înțelege cum să codifici, transmiți și recuperezi informația cuantică între noduri distincte—punând bazele rețelelor cuantice, sistemelor de repetoare, schemelor de comunicare securizată și calculului cuantic modular scalabil.
+<strong>Cum se leagă acest lucru de criteriile 6 și 7:</strong> Într-o rețea cuantică reală, perechea încurcată partajată ar fi creată prin distribuirea unor qubiți &quot;zburători&quot; (precum fotonii) între locațiile lui Alice și Bob (Criteriul 7: transmisie fidelă). Protocolul de teleportare în sine servește apoi ca modalitate de a mapa starea qubitului staționar al lui Alice pe jumătatea sa din perechea încurcată, trimițând-o efectiv lui Bob (Criteriul 6: interconversie). Qiskit ne permite să simulăm perfect logica protocolului, oferind un model conceptual pentru modul în care aceste criterii sunt îndeplinite în arhitecturile de comunicare.</p>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="conclusion-summary">Concluzie și Rezumat<a href="#conclusion-summary" class="hash-link" aria-label="Link direct către Concluzie și Rezumat" title="Link direct către Concluzie și Rezumat" translate="no">​</a></h2>
 <p>Am conceput o serie de exerciții orientate spre cod pentru a ilustra criteriile DiVincenzo folosind Qiskit. Prin aceste exemple practice, ai explorat modul în care o platformă reală de calcul cuantic îndeplinește fiecare cerință:</p>
 <ul>
-<li class=""><strong>Scalabilitate</strong>: construirea circuitelor pe mai mulți qubiți și înțelegerea scalării zgomotului.</li>
-<li class=""><strong>Inițializare</strong>: utilizarea resetărilor și a preparării stărilor pentru a porni în mod fiabil calculele în stări cunoscute.</li>
-<li class=""><strong>Porți Universale</strong>: transpilarea operațiilor complexe în porțile de bază ale unui dispozitiv, dovedind că putem efectua orice calcul.</li>
-<li class=""><strong>Măsurare</strong>: citirea qubiților și gestionarea erorilor realiste de citire.</li>
-<li class=""><strong>Coerență</strong>: observarea efectului T₁, T₂ finit asupra fidelității algoritmilor și nevoia ca operațiile să fie rapide în raport cu decoerența.</li>
+<li class="">
+<p><strong>Scalabilitate</strong>: construirea circuitelor pe mai mulți qubiți și înțelegerea scalării zgomotului.</p>
+</li>
+<li class="">
+<p><strong>Inițializare</strong>: utilizarea resetărilor și a preparării stărilor pentru a porni în mod fiabil calculele în stări cunoscute.</p>
+</li>
+<li class="">
+<p><strong>Porți Universale</strong>: transpilarea operațiilor complexe în porțile de bază ale unui dispozitiv, dovedind că putem efectua orice calcul.</p>
+</li>
+<li class="">
+<p><strong>Măsurare</strong>: citirea qubiților și gestionarea erorilor realiste de citire.</p>
+</li>
+<li class="">
+<p><strong>Coerență</strong>: observarea efectului T₁, T₂ finit asupra fidelității algoritmilor și nevoia ca operațiile să fie rapide în raport cu decoerența.</p>
+</li>
 </ul>
 <p>Pentru completitudine, am atins și aspectele comunicării cuantice prin intermediul modulului <a href="https://quantum.cloud.ibm.com/learning/en/modules/computer-science/quantum-teleportation" target="_blank" rel="noopener noreferrer" class="">Quantum Teleportation</a> din Qiskit in Classrooms, legând ultimele două criterii (qubiți zburători).</p>
 <p>În final, merită remarcat cum se reunesc aceste criterii într-un calculator cuantic real, precum cel al IBM. Un dispozitiv precum <strong>ibmq_brisbane</strong> are 127 de qubiți superconductori (Criteriul 1), fiecare pornind în |0〉 (Criteriul 2), cu un set de porți calibrat și compilatoare pentru universalitate (Criteriul 4), rezonatoare de citire cu microunde pentru fiecare qubit (Criteriul 5), și timpi de coerență de ordinul sutelor de microsecunde față de operații de nanosecunde (Criteriul 3). Pentru experimente de rețele cuantice, IBM și alții explorează transducția microunde-optică pentru qubiții zburători și împletirea qubiților la distanță (Criteriile 6 &amp; 7); acestea sunt domenii active de cercetare.</p>

@@ -15,8 +15,8 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
 <script src="https://unpkg.com/thebelab@0.4.0/lib/index.js" async></script>
 <script src="https://cloud.umami.is/script.js" defer="defer" data-website-id="97f347ac-e7ba-4be3-b26f-ab4b328bdbf2" data-domains="doqumentation.org"></script><link rel="stylesheet" href="/assets/css/styles.e55021e4.css">
-<script src="/assets/js/runtime~main.0f40c68e.js" defer="defer"></script>
-<script src="/assets/js/main.7f93b15a.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.780ace08.js" defer="defer"></script>
+<script src="/assets/js/main.278c8ed9.js" defer="defer"></script>
 </head>
 <body>
 <svg style="display: none;"><defs>
@@ -28,11 +28,21 @@
 <p>Fizicianul David DiVincenzo a formulat cinci cerințe esențiale pentru orice implementare fizică a unui calculator cuantic, plus două criterii suplimentare pentru comunicarea cuantică. În acest notebook, vom <strong>experimenta fiecare criteriu DiVincenzo prin demonstrații practice cu Qiskit</strong>. În loc să aprofundăm teoria, fiecare secțiune explică pe scurt un criteriu și oferă exerciții de cod folosind Qiskit 2. Vei putea rula circuite pe simulatoare și pe dispozitive reale IBM Quantum pentru a <strong>explora fiecare principiu direct, în practică</strong>.</p>
 <p><strong>Cele cinci criterii DiVincenzo pentru calculul cuantic</strong>:</p>
 <ol>
-<li class=""><strong>Un sistem fizic scalabil cu qubiți bine caracterizați.</strong></li>
-<li class=""><strong>Capacitatea de a inițializa qubiții</strong> într-o stare fiducială simplă (de exemplu |00…0〉).</li>
-<li class=""><strong>Timpi de decoerență lungi</strong> (coerența qubitului mult mai lungă decât timpul de operare al poartă-ului).</li>
-<li class=""><strong>Un set universal de poartă-uri cuantice</strong> (capabile să efectueze operații unitare arbitrare).</li>
-<li class=""><strong>Capacitate de măsurare specifică per qubit</strong> (citirea stării fiecărui qubit).</li>
+<li class="">
+<p><strong>Un sistem fizic scalabil cu qubiți bine caracterizați.</strong></p>
+</li>
+<li class="">
+<p><strong>Capacitatea de a inițializa qubiții</strong> într-o stare fiducială simplă (de exemplu |00…0〉).</p>
+</li>
+<li class="">
+<p><strong>Timpi de decoerență lungi</strong> (coerența qubitului mult mai lungă decât timpul de operare al poartă-ului).</p>
+</li>
+<li class="">
+<p><strong>Un set universal de poartă-uri cuantice</strong> (capabile să efectueze operații unitare arbitrare).</p>
+</li>
+<li class="">
+<p><strong>Capacitate de măsurare specifică per qubit</strong> (citirea stării fiecărui qubit).</p>
+</li>
 </ol>
 <p><em>(DiVincenzo a descris, de asemenea, două criterii pentru comunicarea cuantică: capacitatea de a interconverta qubiții staționari și „zburători&quot;, respectiv de a transmite fidel qubiții zburători între locații. Le includem într-o activitate recomandată la finalul acestui notebook.)</em></p>
 <p>Fiecare dintre secțiunile următoare corespunde unui criteriu. Vom folosi Qiskit pentru a ilustra conceptul cu cod și <strong>experimente interactive</strong> pe care le poți încerca. De exemplu, vom vedea cum scalarea numărului de qubiți și a adâncimii Circuit-ului afectează rezultatele (Criteriul 1), cum se resetează și se pregătesc stările qubiților (Criteriul 2), cum se măsoară qubiții pe simulatoare față de dispozitivele reale (Criteriul 4), cum Qiskit compune Gate-uri universale (Criteriul 3) și cum coerența finită (T₁, T₂) impactează calculele (Criteriul 5). La final, vei avea o intuiție mai profundă despre ce înseamnă în practică fiecare criteriu DiVincenzo și cum Qiskit permite experimentarea cu acestea.</p>
@@ -140,22 +150,36 @@ Ar trebui să observi că probabilitatea <code>P(qubit=1)</code> scade pe măsur
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="quantum-communication-criteria-flying-qubits">Criteriile de Comunicare Cuantică (Qubiți Zburători)<a href="#quantum-communication-criteria-flying-qubits" class="hash-link" aria-label="Link direct către Criteriile de Comunicare Cuantică (Qubiți Zburători)" title="Link direct către Criteriile de Comunicare Cuantică (Qubiți Zburători)" translate="no">​</a></h2>
 <p>DiVincenzo a mai enumerat două criterii specifice comunicării cuantice, importante dacă construim un calculator cuantic în rețea:</p>
 <ol start="6">
-<li class=""><strong>Capacitatea de a interconverta qubiți staționari și zburători.</strong> (De exemplu, a mapa un qubit dintr-un procesor pe un foton care poate călători.)</li>
-<li class=""><strong>Capacitatea de a transmite fidel qubiți zburători între locații.</strong> (De exemplu, a trimite un qubit-foton printr-o fibră fără a pierde informația cuantică.)</li>
+<li class="">
+<p><strong>Capacitatea de a interconverta qubiți staționari și zburători.</strong> (De exemplu, a mapa un qubit dintr-un procesor pe un foton care poate călători.)</p>
+</li>
+<li class="">
+<p><strong>Capacitatea de a transmite fidel qubiți zburători între locații.</strong> (De exemplu, a trimite un qubit-foton printr-o fibră fără a pierde informația cuantică.)</p>
+</li>
 </ol>
 <p>Acestea depășesc utilizarea standard a Qiskit deoarece Qiskit se ocupă în principal de qubiți staționari pe un cip. Cu toate acestea, putem ilustra <em>conceptul</em> acestor criterii cu un exemplu simplu: <strong>teleportarea cuantică</strong>. Teleportarea arată conversia stării unui qubit staționar în informații transportate de o pereche entanglată (partea „zburătoare&quot;) și comunicare clasică, care este apoi folosită pentru a reconstrui starea pe un alt qubit staționar din altă parte.</p>
 <h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="recommended-activity-take-the-qiskit-in-classrooms-quantum-teleportation-module">Activitate recomandată: Parcurge modulul <em>Teleportare Cuantică</em> din Qiskit în Clase<a href="#recommended-activity-take-the-qiskit-in-classrooms-quantum-teleportation-module" class="hash-link" aria-label="Link direct către recommended-activity-take-the-qiskit-in-classrooms-quantum-teleportation-module" title="Link direct către recommended-activity-take-the-qiskit-in-classrooms-quantum-teleportation-module" translate="no">​</a></h3>
 <p>Modulul <a href="https://quantum.cloud.ibm.com/learning/en/modules/computer-science/quantum-teleportation" target="_blank" rel="noopener noreferrer" class="">Teleportare Cuantică</a> din Qiskit în Clase, de Dr. Katie McCormick, te va ghida prin unul dintre cele mai captivante protocoale din informația cuantică: teleportarea cuantică, prin care o stare cuantică (un qubit) este trimisă de la Alice la Bob folosind entanglamentul și doar doi biți clasici. Vei învăța procedura completă de teleportare pas cu pas — cum să pregătești perechea Bell entanglată, să efectuezi o măsurare în baza Bell de partea lui Alice, să transmiți rezultatele clasice și să aplici gate-ul cuantic corect pe qubitul lui Bob pentru a recupera perfect starea originală. Pe parcurs, vei explora de ce teleportarea informației unui qubit nu încalcă teorema non-clonării și nici nu depășește viteza luminii. Prin exerciții practice folosind hardware-ul IBM Quantum sau simulatoare, vei dobândi o înțelegere practică a măsurătorii, entanglamentului și controlului de tip feed-forward în acțiune.</p>
-<p>Stăpânind teleportarea cuantică, vei înțelege cum să codifici, să transmiți și să recuperezi informații cuantice între noduri distincte — punând bazele rețelelor cuantice, sistemelor repetor, schemelor de comunicare securizată și calculului cuantic modular scalabil.</p>
-<p><strong>Cum se raportează aceasta la criteriile 6 &amp; 7:</strong> Într-o rețea cuantică reală, perechea entanglată partajată ar fi creată prin distribuirea de qubiți „zburători&quot; (cum ar fi fotoni) între locațiile lui Alice și Bob (Criteriul 7: transmisie fidelă). Protocolul de teleportare în sine servește apoi ca o modalitate de a mapa starea qubitului staționar al lui Alice pe jumătatea sa din perechea entanglată, „trimițând-o&quot; efectiv lui Bob (Criteriul 6: interconversie). Qiskit ne permite să simulăm perfect logica protocolului, oferind un model conceptual pentru modul în care aceste criterii sunt îndeplinite în arhitecturile de comunicare.</p>
+<p>Stăpânind teleportarea cuantică, vei înțelege cum să codifici, transmiți și recuperezi informația cuantică între noduri distincte—punând bazele rețelelor cuantice, sistemelor de repetoare, schemelor de comunicare securizată și calculului cuantic modular scalabil.
+<strong>Cum se leagă acest lucru de criteriile 6 și 7:</strong> Într-o rețea cuantică reală, perechea încurcată partajată ar fi creată prin distribuirea unor qubiți &quot;zburători&quot; (precum fotonii) între locațiile lui Alice și Bob (Criteriul 7: transmisie fidelă). Protocolul de teleportare în sine servește apoi ca modalitate de a mapa starea qubitului staționar al lui Alice pe jumătatea sa din perechea încurcată, trimițând-o efectiv lui Bob (Criteriul 6: interconversie). Qiskit ne permite să simulăm perfect logica protocolului, oferind un model conceptual pentru modul în care aceste criterii sunt îndeplinite în arhitecturile de comunicare.</p>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="conclusion-summary">Concluzie și Rezumat<a href="#conclusion-summary" class="hash-link" aria-label="Link direct către Concluzie și Rezumat" title="Link direct către Concluzie și Rezumat" translate="no">​</a></h2>
 <p>Am conceput o serie de exerciții axate pe cod pentru a ilustra criteriile DiVincenzo folosind Qiskit. Prin aceste exemple practice, ai explorat modul în care o platformă reală de calcul cuantic îndeplinește fiecare cerință:</p>
 <ul>
-<li class=""><strong>Scalabilitate</strong>: construirea de circuite pe mai mulți qubiți și înțelegerea scalării zgomotului.</li>
-<li class=""><strong>Inițializare</strong>: utilizarea resetărilor și pregătirea stărilor pentru a porni calculele în mod fiabil în stări cunoscute.</li>
-<li class=""><strong>Gate-uri Universale</strong>: transpilarea operațiilor complexe la gate-urile de bază ale unui calculator, dovedind că putem efectua orice calcul.</li>
-<li class=""><strong>Măsurare</strong>: citirea qubiților și gestionarea erorilor realiste de citire.</li>
-<li class=""><strong>Coerență</strong>: observarea efectului T₁, T₂ finit asupra fidelității algoritmului și necesitatea ca operațiile să fie rapide în raport cu decoerența.</li>
+<li class="">
+<p><strong>Scalabilitate</strong>: construirea de circuite pe mai mulți qubiți și înțelegerea scalării zgomotului.</p>
+</li>
+<li class="">
+<p><strong>Inițializare</strong>: utilizarea resetărilor și pregătirea stărilor pentru a porni calculele în mod fiabil în stări cunoscute.</p>
+</li>
+<li class="">
+<p><strong>Gate-uri Universale</strong>: transpilarea operațiilor complexe la gate-urile de bază ale unui calculator, dovedind că putem efectua orice calcul.</p>
+</li>
+<li class="">
+<p><strong>Măsurare</strong>: citirea qubiților și gestionarea erorilor realiste de citire.</p>
+</li>
+<li class="">
+<p><strong>Coerență</strong>: observarea efectului T₁, T₂ finit asupra fidelității algoritmului și necesitatea ca operațiile să fie rapide în raport cu decoerența.</p>
+</li>
 </ul>
 <p>Pentru completitudine, am atins și aspectele de comunicare cuantică prin modulul <a href="https://quantum.cloud.ibm.com/learning/en/modules/computer-science/quantum-teleportation" target="_blank" rel="noopener noreferrer" class="">Teleportare Cuantică</a> din Qiskit în Clase, legând ultimele două criterii (qubiți zburători).</p>
 <p>În final, merită să menționăm modul în care aceste criterii se reunesc într-un calculator cuantic real precum cel al IBM. Un dispozitiv precum <strong>ibmq_brisbane</strong> are 127 de qubiți supraconductori (Criteriul 1), fiecare pornind din |0〉 (Criteriul 2), cu un set de gate-uri calibrate și compilatoare pentru universalitate (Criteriul 4), rezonatoare de citire cu microunde pentru fiecare qubit (Criteriul 5) și timpi de coerență de ordinul sutelor de microsecunde față de operații de ordinul nanosecundelor (Criteriul 3). Pentru experimentele de rețele cuantice, IBM și alții explorează transducția microunde-optice pentru qubiți zburători și entanglarea qubiților distanți (Criteriile 6 &amp; 7); acestea sunt domenii active de cercetare.</p>

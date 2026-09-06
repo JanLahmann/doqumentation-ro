@@ -15,8 +15,8 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
 <script src="https://unpkg.com/thebelab@0.4.0/lib/index.js" async></script>
 <script src="https://cloud.umami.is/script.js" defer="defer" data-website-id="97f347ac-e7ba-4be3-b26f-ab4b328bdbf2" data-domains="doqumentation.org"></script><link rel="stylesheet" href="/assets/css/styles.e55021e4.css">
-<script src="/assets/js/runtime~main.0f40c68e.js" defer="defer"></script>
-<script src="/assets/js/main.7f93b15a.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.780ace08.js" defer="defer"></script>
+<script src="/assets/js/main.278c8ed9.js" defer="defer"></script>
 <link data-rh-hreflang rel="alternate" hreflang="en" href="https://doqumentation.org/guides/metapackage-migration" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://de.doqumentation.org/guides/metapackage-migration" /><link data-rh-hreflang rel="alternate" hreflang="es" href="https://es.doqumentation.org/guides/metapackage-migration" /><link data-rh-hreflang rel="alternate" hreflang="fr" href="https://fr.doqumentation.org/guides/metapackage-migration" /><link data-rh-hreflang rel="alternate" hreflang="it" href="https://it.doqumentation.org/guides/metapackage-migration" /><link data-rh-hreflang rel="alternate" hreflang="pt" href="https://pt.doqumentation.org/guides/metapackage-migration" /><link data-rh-hreflang rel="alternate" hreflang="ja" href="https://ja.doqumentation.org/guides/metapackage-migration" /><link data-rh-hreflang rel="alternate" hreflang="fil" href="https://tl.doqumentation.org/guides/metapackage-migration" /><link data-rh-hreflang rel="alternate" hreflang="ar" href="https://ar.doqumentation.org/guides/metapackage-migration" /><link data-rh-hreflang rel="alternate" hreflang="he" href="https://he.doqumentation.org/guides/metapackage-migration" /><link data-rh-hreflang rel="alternate" hreflang="ms" href="https://ms.doqumentation.org/guides/metapackage-migration" /><link data-rh-hreflang rel="alternate" hreflang="id" href="https://id.doqumentation.org/guides/metapackage-migration" /><link data-rh-hreflang rel="alternate" hreflang="th" href="https://th.doqumentation.org/guides/metapackage-migration" /><link data-rh-hreflang rel="alternate" hreflang="ko" href="https://ko.doqumentation.org/guides/metapackage-migration" /><link data-rh-hreflang rel="alternate" hreflang="pl" href="https://pl.doqumentation.org/guides/metapackage-migration" /><link data-rh-hreflang rel="alternate" hreflang="ro" href="https://ro.doqumentation.org/guides/metapackage-migration" /><link data-rh-hreflang rel="alternate" hreflang="uk" href="https://uk.doqumentation.org/guides/metapackage-migration" /><link data-rh-hreflang rel="alternate" hreflang="cs" href="https://cs.doqumentation.org/guides/metapackage-migration" /><link data-rh-hreflang rel="alternate" hreflang="swg" href="https://swg.doqumentation.org/guides/metapackage-migration" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://bad.doqumentation.org/guides/metapackage-migration" /><link data-rh-hreflang rel="alternate" hreflang="bar" href="https://bar.doqumentation.org/guides/metapackage-migration" /><link data-rh-hreflang rel="alternate" hreflang="ksh" href="https://ksh.doqumentation.org/guides/metapackage-migration" /><link data-rh-hreflang rel="alternate" hreflang="nds" href="https://nds.doqumentation.org/guides/metapackage-migration" /><link data-rh-hreflang rel="alternate" hreflang="gsw" href="https://gsw.doqumentation.org/guides/metapackage-migration" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://sax.doqumentation.org/guides/metapackage-migration" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://bln.doqumentation.org/guides/metapackage-migration" /><link data-rh-hreflang rel="alternate" hreflang="de-AT" href="https://aut.doqumentation.org/guides/metapackage-migration" /><link data-rh-hreflang rel="alternate" hreflang="x-default" href="https://doqumentation.org/guides/metapackage-migration" /></head>
 <body>
 <svg style="display: none;"><defs>
@@ -59,7 +59,7 @@ O distribuție poate conține zero sau mai multe module sau pachete.</p>
 În general, dacă îl <code>import</code>-ezi, sursa se referă la „pachet&quot;, iar dacă îl <code>pip install</code>-ezi, sursa se referă la „distribuție&quot;.</p>
 </li>
 <li class="">
-<p><strong>cale de căutare</strong>: Când încearcă să <code>import something</code>, Python caută într-o listă predefinită de locuri un modul sau pachet numit <code>something</code>.
+<p><strong>cale de căutare</strong>: Când încearcă să facă <code>import something</code>, Python caută într-o listă predefinită de locuri un modul sau pachet numit <code>something</code>.
 Lista de locuri este <em>calea de căutare</em>.
 Poți vedea și modifica calea de căutare în <code>sys.path</code>.</p>
 </li>
@@ -82,9 +82,15 @@ Până la Qiskit v1.0, pachetul <code>qiskit</code> era un pachet namespace și 
 Prin urmare, acestea specificau corect cerința lor ca <code>qiskit-terra</code>.
 Cu toate acestea, când oamenii încercau să dezinstaleze Qiskit rulând <code>pip uninstall qiskit</code>, <code>pip</code> întâmpina probleme:</p>
 <ul>
-<li class=""><code>pip</code> nu elimină distribuțiile care nu mai sunt folosite. Deci <code>pip uninstall qiskit</code> nu făcea aproape nimic; nu exista cod în distribuție, deci nu era eliminat niciun cod.</li>
-<li class="">Chiar dacă ar fi eliminat codul, multe distribuții downstream ar fi rămas instalate pentru că depindeau de <code>qiskit-terra</code>.</li>
-<li class="">Chiar dacă <code>qiskit-terra</code> ar fi fost dezinstalat, ar fi putut lăsa în continuare un director <code>qiskit</code> importabil fără cod utilizabil, deoarece era un pachet namespace.</li>
+<li class="">
+<p><code>pip</code> nu elimină distribuțiile care nu mai sunt folosite. Deci <code>pip uninstall qiskit</code> nu făcea aproape nimic; nu exista cod în distribuție, deci nu era eliminat niciun cod.</p>
+</li>
+<li class="">
+<p>Chiar dacă ar fi eliminat codul, multe distribuții downstream ar fi rămas instalate pentru că depindeau de <code>qiskit-terra</code>.</p>
+</li>
+<li class="">
+<p>Chiar dacă <code>qiskit-terra</code> ar fi fost dezinstalat, ar fi putut lăsa în continuare un director <code>qiskit</code> importabil fără cod utilizabil, deoarece era un pachet namespace.</p>
+</li>
 </ul>
 <p>La instalarea sau actualizarea distribuțiilor cu o comandă <code>pip install</code>, <code>pip</code> nu ține cont nici de rezoluțiile anterioare ale cerințelor.
 Deoarece existau două pachete, actualizarea unui pachet care necesita actualizarea <code>qiskit-terra</code> ducea la un mediu invalid; <code>pip</code> actualiza <code>qiskit-terra</code> dar lăsa <code>qiskit</code> neatins.

@@ -15,8 +15,8 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
 <script src="https://unpkg.com/thebelab@0.4.0/lib/index.js" async></script>
 <script src="https://cloud.umami.is/script.js" defer="defer" data-website-id="97f347ac-e7ba-4be3-b26f-ab4b328bdbf2" data-domains="doqumentation.org"></script><link rel="stylesheet" href="/assets/css/styles.e55021e4.css">
-<script src="/assets/js/runtime~main.0f40c68e.js" defer="defer"></script>
-<script src="/assets/js/main.7f93b15a.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.780ace08.js" defer="defer"></script>
+<script src="/assets/js/main.278c8ed9.js" defer="defer"></script>
 <link data-rh-hreflang rel="alternate" hreflang="en" href="https://doqumentation.org/workshop/Hands-on Introduction to Qiskit" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://de.doqumentation.org/workshop/Hands-on Introduction to Qiskit" /><link data-rh-hreflang rel="alternate" hreflang="es" href="https://es.doqumentation.org/workshop/Hands-on Introduction to Qiskit" /><link data-rh-hreflang rel="alternate" hreflang="fr" href="https://fr.doqumentation.org/workshop/Hands-on Introduction to Qiskit" /><link data-rh-hreflang rel="alternate" hreflang="it" href="https://it.doqumentation.org/workshop/Hands-on Introduction to Qiskit" /><link data-rh-hreflang rel="alternate" hreflang="pt" href="https://pt.doqumentation.org/workshop/Hands-on Introduction to Qiskit" /><link data-rh-hreflang rel="alternate" hreflang="ja" href="https://ja.doqumentation.org/workshop/Hands-on Introduction to Qiskit" /><link data-rh-hreflang rel="alternate" hreflang="fil" href="https://tl.doqumentation.org/workshop/Hands-on Introduction to Qiskit" /><link data-rh-hreflang rel="alternate" hreflang="ar" href="https://ar.doqumentation.org/workshop/Hands-on Introduction to Qiskit" /><link data-rh-hreflang rel="alternate" hreflang="he" href="https://he.doqumentation.org/workshop/Hands-on Introduction to Qiskit" /><link data-rh-hreflang rel="alternate" hreflang="ms" href="https://ms.doqumentation.org/workshop/Hands-on Introduction to Qiskit" /><link data-rh-hreflang rel="alternate" hreflang="id" href="https://id.doqumentation.org/workshop/Hands-on Introduction to Qiskit" /><link data-rh-hreflang rel="alternate" hreflang="th" href="https://th.doqumentation.org/workshop/Hands-on Introduction to Qiskit" /><link data-rh-hreflang rel="alternate" hreflang="ko" href="https://ko.doqumentation.org/workshop/Hands-on Introduction to Qiskit" /><link data-rh-hreflang rel="alternate" hreflang="pl" href="https://pl.doqumentation.org/workshop/Hands-on Introduction to Qiskit" /><link data-rh-hreflang rel="alternate" hreflang="ro" href="https://ro.doqumentation.org/workshop/Hands-on Introduction to Qiskit" /><link data-rh-hreflang rel="alternate" hreflang="uk" href="https://uk.doqumentation.org/workshop/Hands-on Introduction to Qiskit" /><link data-rh-hreflang rel="alternate" hreflang="cs" href="https://cs.doqumentation.org/workshop/Hands-on Introduction to Qiskit" /><link data-rh-hreflang rel="alternate" hreflang="swg" href="https://swg.doqumentation.org/workshop/Hands-on Introduction to Qiskit" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://bad.doqumentation.org/workshop/Hands-on Introduction to Qiskit" /><link data-rh-hreflang rel="alternate" hreflang="bar" href="https://bar.doqumentation.org/workshop/Hands-on Introduction to Qiskit" /><link data-rh-hreflang rel="alternate" hreflang="ksh" href="https://ksh.doqumentation.org/workshop/Hands-on Introduction to Qiskit" /><link data-rh-hreflang rel="alternate" hreflang="nds" href="https://nds.doqumentation.org/workshop/Hands-on Introduction to Qiskit" /><link data-rh-hreflang rel="alternate" hreflang="gsw" href="https://gsw.doqumentation.org/workshop/Hands-on Introduction to Qiskit" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://sax.doqumentation.org/workshop/Hands-on Introduction to Qiskit" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://bln.doqumentation.org/workshop/Hands-on Introduction to Qiskit" /><link data-rh-hreflang rel="alternate" hreflang="de-AT" href="https://aut.doqumentation.org/workshop/Hands-on Introduction to Qiskit" /><link data-rh-hreflang rel="alternate" hreflang="x-default" href="https://doqumentation.org/workshop/Hands-on Introduction to Qiskit" /></head>
 <body>
 <svg style="display: none;"><defs>
@@ -36,12 +36,24 @@
 <p>Pentru a executa circuitele tale cuantice pe hardware trebuie mai întâi să îți configurezi contul.
 Poți face asta astfel:</p>
 <ol>
-<li class="">Accesează <a href="https://quantum.cloud.ibm.com/" target="_blank" rel="noopener noreferrer" class="">IBM Quantum® Platform îmbunătățit</a>.</li>
-<li class="">Mergi în colțul din dreapta sus (conform imaginii de mai sus), creează-ți token-ul API și copiază-l într-un loc sigur.</li>
-<li class="">În celula următoare, înlocuiește <code>deleteThisAndPasteYourAPIKeyHere</code> cu cheia ta API.</li>
-<li class="">Mergi în colțul din stânga jos (conform imaginii de mai sus) și <strong>creează-ți instanța</strong>. Asigură-te că alegi planul deschis.</li>
-<li class="">După ce instanța este creată, copiază codul CRN asociat. Este posibil să fie nevoie să reîmprospătezi pagina pentru a vedea instanța.</li>
-<li class="">În celula de mai jos, înlocuiește <code>deleteThisAndPasteYourCRNHere</code> cu codul tău CRN.</li>
+<li class="">
+<p>Accesează <a href="https://quantum.cloud.ibm.com/" target="_blank" rel="noopener noreferrer" class="">IBM Quantum® Platform îmbunătățit</a>.</p>
+</li>
+<li class="">
+<p>Mergi în colțul din dreapta sus (conform imaginii de mai sus), creează-ți token-ul API și copiază-l într-un loc sigur.</p>
+</li>
+<li class="">
+<p>În celula următoare, înlocuiește <code>deleteThisAndPasteYourAPIKeyHere</code> cu cheia ta API.</p>
+</li>
+<li class="">
+<p>Mergi în colțul din stânga jos (conform imaginii de mai sus) și <strong>creează-ți instanța</strong>. Asigură-te că alegi planul deschis.</p>
+</li>
+<li class="">
+<p>După ce instanța este creată, copiază codul CRN asociat. Este posibil să fie nevoie să reîmprospătezi pagina pentru a vedea instanța.</p>
+</li>
+<li class="">
+<p>În celula de mai jos, înlocuiește <code>deleteThisAndPasteYourCRNHere</code> cu codul tău CRN.</p>
+</li>
 </ol>
 <p>Consultă <a href="https://quantum.cloud.ibm.com/docs/guides/cloud-setup" target="_blank" rel="noopener noreferrer" class="">acest ghid</a> pentru mai multe detalii despre configurarea contului tău IBM Cloud®.</p>
 <div class="alert alert-block alert-warning"><p>⚠️ <strong>Notă:</strong> Tratează cheia ta API ca pe o parolă securizată. Consultă ghidul <a href="https://quantum.cloud.ibm.com/docs/guides/cloud-setup#cloud-save" target="_blank" rel="noopener noreferrer" class="">Configurare Cloud</a> pentru mai multe informații despre utilizarea cheii tale API în medii sigure și nesigure.</p></div>
@@ -399,11 +411,21 @@ c-16-25.333-24-45-24-59z"></path></svg></span></span></span></span></span></span
 </ul>
 <p>Și cum funcționează? Fluxul de lucru este următorul</p>
 <ol>
-<li class=""><strong>Pregătește starea lui Alice <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">∣</mi><mi>ψ</mi><mo stretchy="false">⟩</mo></mrow><annotation encoding="application/x-tex">|\psi\rangle</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em"></span><span class="mord">∣</span><span class="mord mathnormal" style="margin-right:0.03588em">ψ</span><span class="mclose">⟩</span></span></span></span> pe <code>q</code>.</strong> Vom crea o stare specifică precum <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">∣</mi><mo>+</mo><mo stretchy="false">⟩</mo></mrow><annotation encoding="application/x-tex">|+\rangle</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em"></span><span class="mord">∣</span><span class="mord">+</span><span class="mclose">⟩</span></span></span></span> pentru verificare.</li>
-<li class=""><strong>Creează întricare:</strong> Generează o pereche Bell între <code>a</code> și <code>b</code>.</li>
-<li class=""><strong>Operațiile lui Alice:</strong> Alice efectuează o „măsurătoare Bell&quot; pe cei doi qubiți ai săi (<code>q</code> și <code>a</code>) și stochează rezultatele clasice în <code>c0</code> și <code>c1</code>.</li>
-<li class=""><strong>Comunicare clasică:</strong> Alice trimite cei doi biți clasici (<code>c0</code>, <code>c1</code>) lui Bob.</li>
-<li class=""><strong>Corecțiile lui Bob:</strong> Bob aplică porți cuantice specifice (X și/sau Z) pe Qubitul său (<code>b</code>), condiționate de valorile <code>c0</code> și <code>c1</code> pe care le-a primit.</li>
+<li class="">
+<p><strong>Pregătește starea lui Alice <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">∣</mi><mi>ψ</mi><mo stretchy="false">⟩</mo></mrow><annotation encoding="application/x-tex">|\psi\rangle</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em"></span><span class="mord">∣</span><span class="mord mathnormal" style="margin-right:0.03588em">ψ</span><span class="mclose">⟩</span></span></span></span> pe <code>q</code>.</strong> Vom crea o stare specifică precum <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">∣</mi><mo>+</mo><mo stretchy="false">⟩</mo></mrow><annotation encoding="application/x-tex">|+\rangle</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em"></span><span class="mord">∣</span><span class="mord">+</span><span class="mclose">⟩</span></span></span></span> pentru verificare.</p>
+</li>
+<li class="">
+<p><strong>Creează întricare:</strong> Generează o pereche Bell între <code>a</code> și <code>b</code>.</p>
+</li>
+<li class="">
+<p><strong>Operațiile lui Alice:</strong> Alice efectuează o „măsurătoare Bell&quot; pe cei doi qubiți ai săi (<code>q</code> și <code>a</code>) și stochează rezultatele clasice în <code>c0</code> și <code>c1</code>.</p>
+</li>
+<li class="">
+<p><strong>Comunicare clasică:</strong> Alice trimite cei doi biți clasici (<code>c0</code>, <code>c1</code>) lui Bob.</p>
+</li>
+<li class="">
+<p><strong>Corecțiile lui Bob:</strong> Bob aplică porți cuantice specifice (X și/sau Z) pe Qubitul său (<code>b</code>), condiționate de valorile <code>c0</code> și <code>c1</code> pe care le-a primit.</p>
+</li>
 </ol>
 <p>Dacă totul este făcut corect, Qubitul <code>b</code> al lui Bob va ajunge în starea <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">∣</mi><mi>ψ</mi><mo stretchy="false">⟩</mo></mrow><annotation encoding="application/x-tex">|\psi\rangle</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em"></span><span class="mord">∣</span><span class="mord mathnormal" style="margin-right:0.03588em">ψ</span><span class="mclose">⟩</span></span></span></span>, starea originală a lui <code>q</code> al lui Alice!</p>
 <p>Pentru o explicație și o explorare mai aprofundată a teleportării cuantice, inclusiv parcurgerea explicației matematice a motivului pentru care funcționează acest protocol, poți consulta resursele IBM Quantum Learning: <a href="https://quantum.cloud.ibm.com/learning/courses/basics-of-quantum-information/entanglement-in-action/quantum-teleportation" target="_blank" rel="noopener noreferrer" class="">Quantum Teleportation</a>. Aceasta face parte din cursul <a href="https://quantum.cloud.ibm.com/learning/courses/basics-of-quantum-information" target="_blank" rel="noopener noreferrer" class="">Basics of Quantum Information</a>.</p>
