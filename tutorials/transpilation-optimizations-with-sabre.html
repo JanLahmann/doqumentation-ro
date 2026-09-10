@@ -14,8 +14,8 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
 <script src="https://unpkg.com/thebelab@0.4.0/lib/index.js" async></script>
 <script src="https://cloud.umami.is/script.js" defer="defer" data-website-id="97f347ac-e7ba-4be3-b26f-ab4b328bdbf2" data-domains="doqumentation.org"></script><link rel="stylesheet" href="/assets/css/styles.d115d309.css">
-<script src="/assets/js/runtime~main.5bf08d0c.js" defer="defer"></script>
-<script src="/assets/js/main.8bd78ffd.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.f76a010b.js" defer="defer"></script>
+<script src="/assets/js/main.1fe91fd9.js" defer="defer"></script>
 <link data-rh-hreflang rel="alternate" hreflang="en" href="https://doqumentation.org/tutorials/transpilation-optimizations-with-sabre" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://de.doqumentation.org/tutorials/transpilation-optimizations-with-sabre" /><link data-rh-hreflang rel="alternate" hreflang="es" href="https://es.doqumentation.org/tutorials/transpilation-optimizations-with-sabre" /><link data-rh-hreflang rel="alternate" hreflang="fr" href="https://fr.doqumentation.org/tutorials/transpilation-optimizations-with-sabre" /><link data-rh-hreflang rel="alternate" hreflang="it" href="https://it.doqumentation.org/tutorials/transpilation-optimizations-with-sabre" /><link data-rh-hreflang rel="alternate" hreflang="pt" href="https://pt.doqumentation.org/tutorials/transpilation-optimizations-with-sabre" /><link data-rh-hreflang rel="alternate" hreflang="ja" href="https://ja.doqumentation.org/tutorials/transpilation-optimizations-with-sabre" /><link data-rh-hreflang rel="alternate" hreflang="fil" href="https://tl.doqumentation.org/tutorials/transpilation-optimizations-with-sabre" /><link data-rh-hreflang rel="alternate" hreflang="ar" href="https://ar.doqumentation.org/tutorials/transpilation-optimizations-with-sabre" /><link data-rh-hreflang rel="alternate" hreflang="he" href="https://he.doqumentation.org/tutorials/transpilation-optimizations-with-sabre" /><link data-rh-hreflang rel="alternate" hreflang="ms" href="https://ms.doqumentation.org/tutorials/transpilation-optimizations-with-sabre" /><link data-rh-hreflang rel="alternate" hreflang="id" href="https://id.doqumentation.org/tutorials/transpilation-optimizations-with-sabre" /><link data-rh-hreflang rel="alternate" hreflang="th" href="https://th.doqumentation.org/tutorials/transpilation-optimizations-with-sabre" /><link data-rh-hreflang rel="alternate" hreflang="ko" href="https://ko.doqumentation.org/tutorials/transpilation-optimizations-with-sabre" /><link data-rh-hreflang rel="alternate" hreflang="pl" href="https://pl.doqumentation.org/tutorials/transpilation-optimizations-with-sabre" /><link data-rh-hreflang rel="alternate" hreflang="ro" href="https://ro.doqumentation.org/tutorials/transpilation-optimizations-with-sabre" /><link data-rh-hreflang rel="alternate" hreflang="uk" href="https://uk.doqumentation.org/tutorials/transpilation-optimizations-with-sabre" /><link data-rh-hreflang rel="alternate" hreflang="cs" href="https://cs.doqumentation.org/tutorials/transpilation-optimizations-with-sabre" /><link data-rh-hreflang rel="alternate" hreflang="x-default" href="https://doqumentation.org/tutorials/transpilation-optimizations-with-sabre" /></head>
 <body>
 <svg style="display: none;"><defs>
@@ -29,25 +29,25 @@
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="learning-outcomes">Rezultate de învățare<a href="#learning-outcomes" class="hash-link" aria-label="Link direct către Rezultate de învățare" title="Link direct către Rezultate de învățare" translate="no">​</a></h2>
 <ul>
 <li class="">
-<p>How to configure SABRE parameters (<code>layout_trials</code>, <code>swap_trials</code>, <code>max_iterations</code>) to improve transpilation quality</p>
+<p>Cum să configurezi parametrii SABRE (<code>layout_trials</code>, <code>swap_trials</code>, <code>max_iterations</code>) pentru a îmbunătăți calitatea transpilării</p>
 </li>
 <li class="">
-<p>The trade-offs between transpilation runtime and circuit quality (depth and gate count)</p>
+<p>Compromisurile dintre timpul de transpilare și calitatea circuitului (adâncime și număr de porți)</p>
 </li>
 <li class="">
-<p>How to customize the SABRE routing heuristic (<code>basic</code>, <code>decay</code>, <code>lookahead</code>) and compare their performance on hardware</p>
+<p>Cum să personalizezi euristica de rutare SABRE (<code>basic</code>, <code>decay</code>, <code>lookahead</code>) și să compari performanța lor pe hardware</p>
 </li>
 </ul>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="prerequisites">Condiții prealabile<a href="#prerequisites" class="hash-link" aria-label="Link direct către Condiții prealabile" title="Link direct către Condiții prealabile" translate="no">​</a></h2>
 <ul>
 <li class="">
-<p><a class="" href="/guides/transpile">Transpile circuits</a>: overview of transpilation in Qiskit</p>
+<p><a class="" href="/guides/transpile">Transpilarea circuitelor</a>: prezentare generală a transpilării în Qiskit</p>
 </li>
 <li class="">
-<p><a class="" href="/guides/transpiler-stages">Transpiler stages</a>: layout and routing stages</p>
+<p><a class="" href="/guides/transpiler-stages">Etapele Transpiler-ului</a>: etapele de layout și rutare</p>
 </li>
 <li class="">
-<p><a class="" href="/guides/transpile-with-pass-managers">Configure preset pass managers</a>: customizing optimization levels</p>
+<p><a class="" href="/guides/transpile-with-pass-managers">Configurarea managerilor de pași preset</a>: personalizarea nivelurilor de optimizare</p>
 </li>
 </ul>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="background">Context<a href="#background" class="hash-link" aria-label="Link direct către Context" title="Link direct către Context" translate="no">​</a></h2>

@@ -14,8 +14,8 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
 <script src="https://unpkg.com/thebelab@0.4.0/lib/index.js" async></script>
 <script src="https://cloud.umami.is/script.js" defer="defer" data-website-id="97f347ac-e7ba-4be3-b26f-ab4b328bdbf2" data-domains="doqumentation.org"></script><link rel="stylesheet" href="/assets/css/styles.d115d309.css">
-<script src="/assets/js/runtime~main.5bf08d0c.js" defer="defer"></script>
-<script src="/assets/js/main.8bd78ffd.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.f76a010b.js" defer="defer"></script>
+<script src="/assets/js/main.1fe91fd9.js" defer="defer"></script>
 <link data-rh-hreflang rel="alternate" hreflang="en" href="https://doqumentation.org/tutorials/warm-start-qaoa" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://de.doqumentation.org/tutorials/warm-start-qaoa" /><link data-rh-hreflang rel="alternate" hreflang="es" href="https://es.doqumentation.org/tutorials/warm-start-qaoa" /><link data-rh-hreflang rel="alternate" hreflang="fr" href="https://fr.doqumentation.org/tutorials/warm-start-qaoa" /><link data-rh-hreflang rel="alternate" hreflang="it" href="https://it.doqumentation.org/tutorials/warm-start-qaoa" /><link data-rh-hreflang rel="alternate" hreflang="pt" href="https://pt.doqumentation.org/tutorials/warm-start-qaoa" /><link data-rh-hreflang rel="alternate" hreflang="ja" href="https://ja.doqumentation.org/tutorials/warm-start-qaoa" /><link data-rh-hreflang rel="alternate" hreflang="fil" href="https://tl.doqumentation.org/tutorials/warm-start-qaoa" /><link data-rh-hreflang rel="alternate" hreflang="ar" href="https://ar.doqumentation.org/tutorials/warm-start-qaoa" /><link data-rh-hreflang rel="alternate" hreflang="he" href="https://he.doqumentation.org/tutorials/warm-start-qaoa" /><link data-rh-hreflang rel="alternate" hreflang="ms" href="https://ms.doqumentation.org/tutorials/warm-start-qaoa" /><link data-rh-hreflang rel="alternate" hreflang="id" href="https://id.doqumentation.org/tutorials/warm-start-qaoa" /><link data-rh-hreflang rel="alternate" hreflang="th" href="https://th.doqumentation.org/tutorials/warm-start-qaoa" /><link data-rh-hreflang rel="alternate" hreflang="ko" href="https://ko.doqumentation.org/tutorials/warm-start-qaoa" /><link data-rh-hreflang rel="alternate" hreflang="pl" href="https://pl.doqumentation.org/tutorials/warm-start-qaoa" /><link data-rh-hreflang rel="alternate" hreflang="ro" href="https://ro.doqumentation.org/tutorials/warm-start-qaoa" /><link data-rh-hreflang rel="alternate" hreflang="uk" href="https://uk.doqumentation.org/tutorials/warm-start-qaoa" /><link data-rh-hreflang rel="alternate" hreflang="cs" href="https://cs.doqumentation.org/tutorials/warm-start-qaoa" /><link data-rh-hreflang rel="alternate" hreflang="x-default" href="https://doqumentation.org/tutorials/warm-start-qaoa" /></head>
 <body>
 <svg style="display: none;"><defs>
@@ -29,25 +29,25 @@
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="learning-outcomes">Rezultate ale învățării<a href="#learning-outcomes" class="hash-link" aria-label="Link direct către Rezultate ale învățării" title="Link direct către Rezultate ale învățării" translate="no">​</a></h2>
 <ul>
 <li class="">
-<p>How to map a max-cut problem to a quantum Quadratic Unconstrained Binary Optimization (QUBO) formulation using <code>qiskit-addon-opt-mapper</code></p>
+<p>Cum să mapezi o problemă max-cut la o formulare de Optimizare Binară Fără Constrângeri Cuadratică (QUBO) folosind <code>qiskit-addon-opt-mapper</code></p>
 </li>
 <li class="">
-<p>How to implement and run standard QAOA on a simulator</p>
+<p>Cum să implementezi și să rulezi QAOA standard pe un simulator</p>
 </li>
 <li class="">
-<p>How to apply WS-QAOA by computing the quadratic program (QP) relaxation and building the warm-start circuit</p>
+<p>Cum să aplici WS-QAOA calculând relaxarea programului cuadratic (QP) și construind circuitul warm-start</p>
 </li>
 <li class="">
-<p>How to compare energy convergence and solution quality between standard QAOA and WS-QAOA</p>
+<p>Cum să compari convergența energiei și calitatea soluției între QAOA standard și WS-QAOA</p>
 </li>
 </ul>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="prerequisites">Cerințe prealabile<a href="#prerequisites" class="hash-link" aria-label="Link direct către Cerințe prealabile" title="Link direct către Cerințe prealabile" translate="no">​</a></h2>
 <ul>
 <li class="">
-<p><a class="" href="/tutorials/quantum-approximate-optimization-algorithm">QAOA tutorial</a></p>
+<p><a class="" href="/tutorials/quantum-approximate-optimization-algorithm">Tutorialul QAOA</a></p>
 </li>
 <li class="">
-<p><a class="" href="/tutorials/advanced-techniques-for-qaoa">Advanced QAOA tutorial</a></p>
+<p><a class="" href="/tutorials/advanced-techniques-for-qaoa">Tutorialul QAOA avansat</a></p>
 </li>
 </ul>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="background">Context<a href="#background" class="hash-link" aria-label="Link direct către Context" title="Link direct către Context" translate="no">​</a></h2>
