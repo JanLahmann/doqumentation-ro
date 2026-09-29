@@ -14,8 +14,8 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
 <script src="https://unpkg.com/thebelab@0.4.0/lib/index.js" async></script>
 <script src="https://cloud.umami.is/script.js" defer="defer" data-website-id="97f347ac-e7ba-4be3-b26f-ab4b328bdbf2" data-domains="doqumentation.org"></script><link rel="stylesheet" href="/assets/css/styles.d115d309.css">
-<script src="/assets/js/runtime~main.a46d8bed.js" defer="defer"></script>
-<script src="/assets/js/main.e3f11994.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.63a395dd.js" defer="defer"></script>
+<script src="/assets/js/main.0fe6f276.js" defer="defer"></script>
 <link data-rh-hreflang rel="alternate" hreflang="en" href="https://doqumentation.org/guides/configure-qiskit-local" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://de.doqumentation.org/guides/configure-qiskit-local" /><link data-rh-hreflang rel="alternate" hreflang="es" href="https://es.doqumentation.org/guides/configure-qiskit-local" /><link data-rh-hreflang rel="alternate" hreflang="fr" href="https://fr.doqumentation.org/guides/configure-qiskit-local" /><link data-rh-hreflang rel="alternate" hreflang="it" href="https://it.doqumentation.org/guides/configure-qiskit-local" /><link data-rh-hreflang rel="alternate" hreflang="pt" href="https://pt.doqumentation.org/guides/configure-qiskit-local" /><link data-rh-hreflang rel="alternate" hreflang="ja" href="https://ja.doqumentation.org/guides/configure-qiskit-local" /><link data-rh-hreflang rel="alternate" hreflang="fil" href="https://tl.doqumentation.org/guides/configure-qiskit-local" /><link data-rh-hreflang rel="alternate" hreflang="ar" href="https://ar.doqumentation.org/guides/configure-qiskit-local" /><link data-rh-hreflang rel="alternate" hreflang="he" href="https://he.doqumentation.org/guides/configure-qiskit-local" /><link data-rh-hreflang rel="alternate" hreflang="ms" href="https://ms.doqumentation.org/guides/configure-qiskit-local" /><link data-rh-hreflang rel="alternate" hreflang="id" href="https://id.doqumentation.org/guides/configure-qiskit-local" /><link data-rh-hreflang rel="alternate" hreflang="th" href="https://th.doqumentation.org/guides/configure-qiskit-local" /><link data-rh-hreflang rel="alternate" hreflang="ko" href="https://ko.doqumentation.org/guides/configure-qiskit-local" /><link data-rh-hreflang rel="alternate" hreflang="pl" href="https://pl.doqumentation.org/guides/configure-qiskit-local" /><link data-rh-hreflang rel="alternate" hreflang="ro" href="https://ro.doqumentation.org/guides/configure-qiskit-local" /><link data-rh-hreflang rel="alternate" hreflang="uk" href="https://uk.doqumentation.org/guides/configure-qiskit-local" /><link data-rh-hreflang rel="alternate" hreflang="cs" href="https://cs.doqumentation.org/guides/configure-qiskit-local" /><link data-rh-hreflang rel="alternate" hreflang="x-default" href="https://doqumentation.org/guides/configure-qiskit-local" /></head>
 <body>
 <svg style="display: none;"><defs>
@@ -38,7 +38,7 @@
 <p><code>circuit_mpl_style</code>: Foaia de stil implicită folosită pentru sistemul de ieșire mpl pentru desenarea circuitului. Valorile valide sunt <code>default</code> sau <code>bw</code>.</p>
 </li>
 <li class="">
-<p><code>circuit_mpl_style_path</code>: Căile pe care desenatorul de circuit le folosește pentru a căuta foi de stil JSON atunci când se folosește modul de ieșire mpl.</p>
+<p><code>circuit_mpl_style_path</code>: Căile în care sistemul de desenare a circuitelor caută foi de stil JSON atunci când se folosește modul de ieșire mpl.</p>
 </li>
 <li class="">
 <p><code>state_drawer</code>: Aceasta este folosită pentru a schimba sistemul implicit pentru metodele de desenare a vizualizării stărilor. Valorile valide sunt <code>repr</code>, <code>text</code>, <code>latex</code>, <code>latex_source</code>, <code>qsphere</code>, <code>hinton</code> sau <code>bloch</code>. Când argumentul cheie output nu este setat explicit pe metoda <a class="" href="/api/qiskit/qiskit.quantum_info.DensityMatrix#densitymatrix">qiskit.quantum_info.DensityMatrix.draw</a>, se folosește metoda de ieșire specificată.</p>
@@ -64,7 +64,7 @@
 <p>Setează aceste variabile de mediu pentru a modifica comportamentul implicit al Qiskit:</p>
 <ul>
 <li class="">
-<p><code>QISKIT_PARALLEL</code>: Activează multiprocesarea Python pentru a paraleliza anumite operațiuni; de exemplu, transpilarea peste mai multe Circuit-uri în Qiskit. Specifică o valoare booleană.</p>
+<p><code>QISKIT_PARALLEL</code>: Activează multiprocesarea Python pentru a paraleliza anumite operațiuni; de exemplu, transpilarea mai multor circuite în Qiskit. Specifică o valoare booleană.</p>
 </li>
 <li class="">
 <p><code>QISKIT_NUM_PROCS</code>: Numărul maxim de procese paralele de lansat pentru operațiunile paralele, dacă execuția paralelă este activată. Specifică un număr întreg mai mare decât zero.</p>
