@@ -14,8 +14,8 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
 <script src="https://unpkg.com/thebelab@0.4.0/lib/index.js" async></script>
 <script src="https://cloud.umami.is/script.js" defer="defer" data-website-id="97f347ac-e7ba-4be3-b26f-ab4b328bdbf2" data-domains="doqumentation.org"></script><link rel="stylesheet" href="/assets/css/styles.d115d309.css">
-<script src="/assets/js/runtime~main.4bd66a09.js" defer="defer"></script>
-<script src="/assets/js/main.3ae774f4.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.5be74a9c.js" defer="defer"></script>
+<script src="/assets/js/main.78ab4487.js" defer="defer"></script>
 <link data-rh-hreflang rel="alternate" hreflang="en" href="https://doqumentation.org/guides/serverless-run-first-workload" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://de.doqumentation.org/guides/serverless-run-first-workload" /><link data-rh-hreflang rel="alternate" hreflang="es" href="https://es.doqumentation.org/guides/serverless-run-first-workload" /><link data-rh-hreflang rel="alternate" hreflang="fr" href="https://fr.doqumentation.org/guides/serverless-run-first-workload" /><link data-rh-hreflang rel="alternate" hreflang="it" href="https://it.doqumentation.org/guides/serverless-run-first-workload" /><link data-rh-hreflang rel="alternate" hreflang="pt" href="https://pt.doqumentation.org/guides/serverless-run-first-workload" /><link data-rh-hreflang rel="alternate" hreflang="ja" href="https://ja.doqumentation.org/guides/serverless-run-first-workload" /><link data-rh-hreflang rel="alternate" hreflang="fil" href="https://tl.doqumentation.org/guides/serverless-run-first-workload" /><link data-rh-hreflang rel="alternate" hreflang="ar" href="https://ar.doqumentation.org/guides/serverless-run-first-workload" /><link data-rh-hreflang rel="alternate" hreflang="he" href="https://he.doqumentation.org/guides/serverless-run-first-workload" /><link data-rh-hreflang rel="alternate" hreflang="ms" href="https://ms.doqumentation.org/guides/serverless-run-first-workload" /><link data-rh-hreflang rel="alternate" hreflang="id" href="https://id.doqumentation.org/guides/serverless-run-first-workload" /><link data-rh-hreflang rel="alternate" hreflang="th" href="https://th.doqumentation.org/guides/serverless-run-first-workload" /><link data-rh-hreflang rel="alternate" hreflang="ko" href="https://ko.doqumentation.org/guides/serverless-run-first-workload" /><link data-rh-hreflang rel="alternate" hreflang="pl" href="https://pl.doqumentation.org/guides/serverless-run-first-workload" /><link data-rh-hreflang rel="alternate" hreflang="ro" href="https://ro.doqumentation.org/guides/serverless-run-first-workload" /><link data-rh-hreflang rel="alternate" hreflang="uk" href="https://uk.doqumentation.org/guides/serverless-run-first-workload" /><link data-rh-hreflang rel="alternate" hreflang="cs" href="https://cs.doqumentation.org/guides/serverless-run-first-workload" /><link data-rh-hreflang rel="alternate" hreflang="x-default" href="https://doqumentation.org/guides/serverless-run-first-workload" /></head>
 <body>
 <svg style="display: none;"><defs>
@@ -49,7 +49,7 @@ Recomandăm să folosești aceste versiuni sau unele mai noi.</p><div class="lan
 <div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><div class="token-line" style="color:#393A34"><span class="token plain">&#x27;118256c5-bbb0-4ea8-9e9f-51aac2220aef&#x27;</span><br></div></code></pre></div></div>
 <span id="serverless-job-status"></span>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="check-job-status">Verifică statusul job-ului<a href="#check-job-status" class="hash-link" aria-label="Link direct către Verifică statusul job-ului" title="Link direct către Verifică statusul job-ului" translate="no">​</a></h2>
-<p>Cu <code>job_id</code>-ul tău Qiskit Serverless, poți verifica statusul job-urilor în curs de rulare. Acesta include următoarele statusuri:</p>
+<p>Cu <code>job_id</code>-ul tău Qiskit Serverless, poți verifica statusul job-urilor în curs de rulare. Statusurile posibile sunt următoarele:</p>
 <ul>
 <li class="">
 <p><strong><code>QUEUED</code></strong>: Programul de la distanță se află în coada Qiskit Serverless. Prioritatea din coadă se bazează în prezent pe cât de mult ai folosit Qiskit Serverless</p>
@@ -61,7 +61,7 @@ Recomandăm să folosești aceste versiuni sau unele mai noi.</p><div class="lan
 <p><strong><code>RUNNING</code></strong>: Programul rulează. În această etapă, dacă ai ieșiri <code>print()</code> în programul tău, poți recupera jurnalele folosind <code>job.logs()</code></p>
 </li>
 <li class="">
-<p><strong><code>DONE</code></strong>: Programul este complet și poți recupera datele stocate în <code>save_result()</code> cu <code>job.results()</code></p>
+<p><strong><code>DONE</code></strong>: Programul s-a încheiat și poți recupera datele stocate cu <code>save_result()</code> folosind <code>job.results()</code></p>
 </li>
 </ul>
 <p>Poți seta și statusuri mai detaliate ale job-urilor în <a class="" href="/guides/serverless-manage-resources">Gestionează resursele de calcul și date Qiskit Serverless</a>.</p>
