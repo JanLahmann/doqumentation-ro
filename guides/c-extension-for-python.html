@@ -14,8 +14,8 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
 <script src="https://unpkg.com/thebelab@0.4.0/lib/index.js" async></script>
 <script src="https://cloud.umami.is/script.js" defer="defer" data-website-id="97f347ac-e7ba-4be3-b26f-ab4b328bdbf2" data-domains="doqumentation.org"></script><link rel="stylesheet" href="/assets/css/styles.d115d309.css">
-<script src="/assets/js/runtime~main.01add6e9.js" defer="defer"></script>
-<script src="/assets/js/main.891e3782.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.4bd66a09.js" defer="defer"></script>
+<script src="/assets/js/main.58630d65.js" defer="defer"></script>
 <link data-rh-hreflang rel="alternate" hreflang="en" href="https://doqumentation.org/guides/c-extension-for-python" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://de.doqumentation.org/guides/c-extension-for-python" /><link data-rh-hreflang rel="alternate" hreflang="es" href="https://es.doqumentation.org/guides/c-extension-for-python" /><link data-rh-hreflang rel="alternate" hreflang="fr" href="https://fr.doqumentation.org/guides/c-extension-for-python" /><link data-rh-hreflang rel="alternate" hreflang="it" href="https://it.doqumentation.org/guides/c-extension-for-python" /><link data-rh-hreflang rel="alternate" hreflang="pt" href="https://pt.doqumentation.org/guides/c-extension-for-python" /><link data-rh-hreflang rel="alternate" hreflang="ja" href="https://ja.doqumentation.org/guides/c-extension-for-python" /><link data-rh-hreflang rel="alternate" hreflang="fil" href="https://tl.doqumentation.org/guides/c-extension-for-python" /><link data-rh-hreflang rel="alternate" hreflang="ar" href="https://ar.doqumentation.org/guides/c-extension-for-python" /><link data-rh-hreflang rel="alternate" hreflang="he" href="https://he.doqumentation.org/guides/c-extension-for-python" /><link data-rh-hreflang rel="alternate" hreflang="ms" href="https://ms.doqumentation.org/guides/c-extension-for-python" /><link data-rh-hreflang rel="alternate" hreflang="id" href="https://id.doqumentation.org/guides/c-extension-for-python" /><link data-rh-hreflang rel="alternate" hreflang="th" href="https://th.doqumentation.org/guides/c-extension-for-python" /><link data-rh-hreflang rel="alternate" hreflang="ko" href="https://ko.doqumentation.org/guides/c-extension-for-python" /><link data-rh-hreflang rel="alternate" hreflang="pl" href="https://pl.doqumentation.org/guides/c-extension-for-python" /><link data-rh-hreflang rel="alternate" hreflang="ro" href="https://ro.doqumentation.org/guides/c-extension-for-python" /><link data-rh-hreflang rel="alternate" hreflang="uk" href="https://uk.doqumentation.org/guides/c-extension-for-python" /><link data-rh-hreflang rel="alternate" hreflang="cs" href="https://cs.doqumentation.org/guides/c-extension-for-python" /><link data-rh-hreflang rel="alternate" hreflang="x-default" href="https://doqumentation.org/guides/c-extension-for-python" /></head>
 <body>
 <svg style="display: none;"><defs>
@@ -41,7 +41,7 @@ cu un caz de utilizare real în addon-urile Qiskit.</p>
 </ul><p>API-ul C Qiskit este expus pentru modulele de extensie Python într-un mod foarte similar cu API-ul C
 NumPy. Dacă ai programat anterior o extensie NumPy, vei găsi procesul Qiskit
 familiar.</p></div></div>
-<div class="theme-admonition theme-admonition-warning admonition_xJq3 alert alert--warning"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8.893 1.5c-.183-.31-.52-.5-.887-.5s-.703.19-.886.5L.138 13.499a.98.98 0 0 0 0 1.001c.193.31.53.501.886.501h13.964c.367 0 .704-.19.877-.5a1.03 1.03 0 0 0 .01-1.002L8.893 1.5zm.133 11.497H6.987v-2.003h2.039v2.003zm0-3.004H6.987V5.987h2.039v4.006z"></path></svg></span>avertizare</div><div class="admonitionContent_BuS1"><p>API-ul C Qiskit este încă experimental. Astfel, nu există încă o interfață de programare sau binară complet stabilă și pot exista modificări de rupere între versiuni minore.</p><p>De exemplu, un modul de extensie care utilizează Qiskit v2.4.0 la momentul build-ului are garanția că funcționează cu
+<div class="theme-admonition theme-admonition-warning admonition_xJq3 alert alert--warning"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8.893 1.5c-.183-.31-.52-.5-.887-.5s-.703.19-.886.5L.138 13.499a.98.98 0 0 0 0 1.001c.193.31.53.501.886.501h13.964c.367 0 .704-.19.877-.5a1.03 1.03 0 0 0 .01-1.002L8.893 1.5zm.133 11.497H6.987v-2.003h2.039v2.003zm0-3.004H6.987V5.987h2.039v4.006z"></path></svg></span>avertizare</div><div class="admonitionContent_BuS1"><p>API-ul C Qiskit este încă experimental. Astfel, nu există încă o interfață de programare sau binară complet stabilă și pot exista modificări incompatibile între versiuni minore.</p><p>De exemplu, un modul de extensie care utilizează Qiskit v2.4.0 la momentul build-ului are garanția că funcționează cu
 Qiskit v2.4.1 la execuție, dar s-ar putea să nu funcționeze cu Qiskit v2.5.0 la execuție.</p></div></div>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="requirements">Cerințe<a href="#requirements" class="hash-link" aria-label="Link direct către Cerințe" title="Link direct către Cerințe" translate="no">​</a></h2>
 <p>Completează instrucțiunile din secțiunea <a class="" href="/guides/install-c-api">Instalare</a> pentru a instala următoarele:</p>
@@ -155,7 +155,7 @@ această logică în spațiul Python în secțiunea următoare.</p>
 trebuie să luăm în considerare doar API-ul C pur. Nu există nicio interacțiune cu interpretorul Python
 în acest cod.</p>
 <p>Reține că toate funcțiile și simbolurile definite în această secțiune sunt declarate cu legătură <code>static</code>.
-Aceasta deoarece interpretorul Python nu se va lega împotriva acestui modul de extensie; vom furniza
+Aceasta deoarece interpretorul Python nu va face link cu acest modul de extensie; vom furniza
 interpretorului detaliile funcțiilor disponibile în secțiunea următoare.</p>
 <p>Nu vom insista asupra detaliilor algoritmice ale acestui cod; este instructiv să folosim un pas de
 transpilare semnificativ pentru demonstrație, dar implementarea precisă a algoritmului nu este
@@ -184,10 +184,10 @@ oricărui obiect Python.</p>
 argumente cuvânt cheie și funcțiile de conversie. Dacă aceasta eșuează, funcția propagă eroarea.</p>
 </li>
 <li class="">
-<p>Deleagă logica de business nativă C din secțiunea anterioară, care modifică DAG-ul în loc.</p>
+<p>Deleagă către logica de business nativă C din secțiunea anterioară, care modifică DAG-ul pe loc (in situ).</p>
 </li>
 <li class="">
-<p>Returnează obiectul Python-space <code>None</code>.</p>
+<p>Returnează obiectul <code>None</code> din spațiul Python.</p>
 </li>
 </ol>
 <p>Cea mai complexă logică se află în <code>PyArg_ParseTupleAndKeywords</code>. Aceasta este bine documentată în <a href="https://docs.python.org/3/c-api/arg.html" target="_blank" rel="noopener noreferrer" class="">documentația
