@@ -14,8 +14,8 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
 <script src="https://unpkg.com/thebelab@0.4.0/lib/index.js" async></script>
 <script src="https://cloud.umami.is/script.js" defer="defer" data-website-id="97f347ac-e7ba-4be3-b26f-ab4b328bdbf2" data-domains="doqumentation.org"></script><link rel="stylesheet" href="/assets/css/styles.d115d309.css">
-<script src="/assets/js/runtime~main.5be74a9c.js" defer="defer"></script>
-<script src="/assets/js/main.fe58dc9d.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.53872204.js" defer="defer"></script>
+<script src="/assets/js/main.472767b8.js" defer="defer"></script>
 <link data-rh-hreflang rel="alternate" hreflang="en" href="https://doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://de.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="es" href="https://es.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="fr" href="https://fr.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="it" href="https://it.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="pt" href="https://pt.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="ja" href="https://ja.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="fil" href="https://tl.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="ar" href="https://ar.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="he" href="https://he.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="ms" href="https://ms.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="id" href="https://id.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="th" href="https://th.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="ko" href="https://ko.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="pl" href="https://pl.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="ro" href="https://ro.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="uk" href="https://uk.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="cs" href="https://cs.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="x-default" href="https://doqumentation.org/guides/qiskit-sdk-version-strategy" /></head>
 <body>
 <svg style="display: none;"><defs>
@@ -80,19 +80,19 @@ dependenței și versiunea mai veche.</p>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="upgrade-strategy">Strategia de actualizare<a href="#upgrade-strategy" class="hash-link" aria-label="Link direct către Strategia de actualizare" title="Link direct către Strategia de actualizare" translate="no">​</a></h2>
 <p>Când este lansată o nouă versiune majoră, calea de actualizare recomandată
 este să actualizezi mai întâi la cea mai recentă versiune minoră a versiunii majore anterioare.
-Imediat înainte de o nouă versiune majoră, va fi publicată o versiune minoră finală.
+Cu puțin timp înainte de o nouă versiune majoră, va fi publicată o versiune minoră finală.
 Această lansare finală de versiune minoră <code>X.Y+1.0.0</code> este echivalentă cu
 <code>X.Y.0</code>, dar cu avertismente și deprecieri pentru orice modificări ale API care sunt
 realizate în seria noii versiuni majore.</p>
-<p>De exemplu, imediat după lansarea 1.0.0, o lansare 0.46.0 este
-publicată. Lansarea 0.46.0 este echivalentă cu lansarea 0.45.0, dar cu
+<p>De exemplu, imediat înainte de lansarea 1.0.0, este publicată o lansare 0.46.0.
+Lansarea 0.46.0 este echivalentă cu lansarea 0.45.0, dar cu
 avertismente de depreciere suplimentare care documentează modificările API realizate ca
 parte a lansării 1.0.0. Acest tipar se aplică la orice lansări de versiuni majore.</p>
 <p>Utilizatorii Qiskit ar trebui să actualizeze mai întâi la această versiune minoră finală
 pentru a vedea eventualele avertismente de depreciere și să-și ajusteze
 utilizarea Qiskit înainte de a încerca o lansare potențial incompatibilă. Versiunea majoră anterioară
 va fi susținută cel puțin șase luni pentru a oferi timp suficient
-de actualizare. Un tipar tipic pentru gestionarea acestui proces este să fixezi versiunea maximă pentru a
+de actualizare. O practică uzuală pentru gestionarea acestui proces este să fixezi versiunea maximă pentru a
 evita utilizarea seriei de lansări majore următoare până când ești sigur de compatibilitate.
 De exemplu, specificând <code>qiskit&lt;2</code> într-un fișier de cerințe când versiunea majoră curentă
 Qiskit este 1, te asiguri că utilizezi o versiune Qiskit
@@ -103,7 +103,7 @@ lansare majoră.
 Fără această limitare, <code>pip</code> instalează
 implicit cea mai nouă versiune disponibilă.</p>
 <p>Formatul de serializare QPY este compatibil invers, astfel încât o nouă lansare Qiskit poate întotdeauna încărca un fișier QPY
-generat cu o lansare anterioară Qiskit. Totuși, formatul nu este compatibil direct, deci, în principiu, nu este posibil
+generat cu o lansare anterioară Qiskit. Totuși, formatul nu este compatibil înainte, deci, în principiu, nu este posibil
 să încarci fișiere QPY generate cu o versiune mai nouă Qiskit folosind o lansare mai veche. Pentru a facilita migrarea utilizatorilor între lansările de versiuni majore, funcția <a href="https://docs.quantum.ibm.com/api/qiskit/qpy#dump" target="_blank" rel="noopener noreferrer" class=""><code>qiskit.qpy.dump()</code></a> va suporta întotdeauna cel puțin o versiune suprapusă între lansarea <code>X.0.0</code> și lansarea <code>X-1.Y.0</code> (unde <code>Y</code> este ultima versiune minoră a
 acelei serii). Parametrul <code>qiskit.qpy.dump(..., version=...)</code> va permite salvarea fișierelor în format QPY care pot fi încărcate de ambele versiuni majore din lansarea mai nouă. Vezi mai multe detalii în <a href="https://github.com/Qiskit/RFCs/blob/master/0020-release_cycle.md#qpy-support" target="_blank" rel="noopener noreferrer" class="">RFC 0020</a>.</p>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="pre-releases">Pre-lansări<a href="#pre-releases" class="hash-link" aria-label="Link direct către Pre-lansări" title="Link direct către Pre-lansări" translate="no">​</a></h2>
