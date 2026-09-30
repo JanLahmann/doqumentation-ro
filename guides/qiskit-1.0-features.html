@@ -14,8 +14,8 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
 <script src="https://unpkg.com/thebelab@0.4.0/lib/index.js" async></script>
 <script src="https://cloud.umami.is/script.js" defer="defer" data-website-id="97f347ac-e7ba-4be3-b26f-ab4b328bdbf2" data-domains="doqumentation.org"></script><link rel="stylesheet" href="/assets/css/styles.d115d309.css">
-<script src="/assets/js/runtime~main.dcecb5fb.js" defer="defer"></script>
-<script src="/assets/js/main.575ad816.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.f47170db.js" defer="defer"></script>
+<script src="/assets/js/main.433b8fd8.js" defer="defer"></script>
 <link data-rh-hreflang rel="alternate" hreflang="en" href="https://doqumentation.org/guides/qiskit-1.0-features" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://de.doqumentation.org/guides/qiskit-1.0-features" /><link data-rh-hreflang rel="alternate" hreflang="es" href="https://es.doqumentation.org/guides/qiskit-1.0-features" /><link data-rh-hreflang rel="alternate" hreflang="fr" href="https://fr.doqumentation.org/guides/qiskit-1.0-features" /><link data-rh-hreflang rel="alternate" hreflang="it" href="https://it.doqumentation.org/guides/qiskit-1.0-features" /><link data-rh-hreflang rel="alternate" hreflang="pt" href="https://pt.doqumentation.org/guides/qiskit-1.0-features" /><link data-rh-hreflang rel="alternate" hreflang="ja" href="https://ja.doqumentation.org/guides/qiskit-1.0-features" /><link data-rh-hreflang rel="alternate" hreflang="fil" href="https://tl.doqumentation.org/guides/qiskit-1.0-features" /><link data-rh-hreflang rel="alternate" hreflang="ar" href="https://ar.doqumentation.org/guides/qiskit-1.0-features" /><link data-rh-hreflang rel="alternate" hreflang="he" href="https://he.doqumentation.org/guides/qiskit-1.0-features" /><link data-rh-hreflang rel="alternate" hreflang="ms" href="https://ms.doqumentation.org/guides/qiskit-1.0-features" /><link data-rh-hreflang rel="alternate" hreflang="id" href="https://id.doqumentation.org/guides/qiskit-1.0-features" /><link data-rh-hreflang rel="alternate" hreflang="th" href="https://th.doqumentation.org/guides/qiskit-1.0-features" /><link data-rh-hreflang rel="alternate" hreflang="ko" href="https://ko.doqumentation.org/guides/qiskit-1.0-features" /><link data-rh-hreflang rel="alternate" hreflang="pl" href="https://pl.doqumentation.org/guides/qiskit-1.0-features" /><link data-rh-hreflang rel="alternate" hreflang="ro" href="https://ro.doqumentation.org/guides/qiskit-1.0-features" /><link data-rh-hreflang rel="alternate" hreflang="uk" href="https://uk.doqumentation.org/guides/qiskit-1.0-features" /><link data-rh-hreflang rel="alternate" hreflang="cs" href="https://cs.doqumentation.org/guides/qiskit-1.0-features" /><link data-rh-hreflang rel="alternate" hreflang="x-default" href="https://doqumentation.org/guides/qiskit-1.0-features" /></head>
 <body>
 <svg style="display: none;"><defs>
@@ -219,7 +219,7 @@ expune un argument <code>shots</code> (similar cu fluxul de lucru anterior):</p>
 <li class="">
 <p><a href="https://docs.quantum.ibm.com/api/qiskit/qiskit.primitives.BaseEstimatorV2#run" target="_blank" rel="noopener noreferrer" class=""><code>EstimatorV2.run</code></a>
 introduce un argument <code>precision</code> care specifică marjele de eroare pe care
-implementarea primitivei ar trebui să le vizeze pentru estimările valorilor de așteptare:</p>
+implementarea primitivei ar trebui să le vizeze pentru estimările valorilor așteptate:</p>
 <div class="executable-code"><div class="executable-code__code" style="display:block"><div class="language-python codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-python codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv codeBlockLinesWithNumbering_o6Pm" style="counter-reset:line-count 0"><div class="token-line codeLine_lJS_" style="color:#393A34"><span class="codeLineNumber_Tfdd"></span><span class="codeLineContent_feaV"><span class="token comment" style="color:#999988;font-style:italic"># Estimate expectation values for two PUBs, both with 0.05 precision.</span><span class="token plain"></span></span><br></div><div class="token-line codeLine_lJS_" style="color:#393A34"><span class="codeLineNumber_Tfdd"></span><span class="codeLineContent_feaV"><span class="token plain">estimator_v2</span><span class="token punctuation" style="color:#393A34">.</span><span class="token plain">run</span><span class="token punctuation" style="color:#393A34">(</span><span class="token punctuation" style="color:#393A34">[</span><span class="token punctuation" style="color:#393A34">(</span><span class="token plain">circuit1</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"> obs_array1</span><span class="token punctuation" style="color:#393A34">)</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"> </span></span><br></div><div class="token-line codeLine_lJS_" style="color:#393A34"><span class="codeLineNumber_Tfdd"></span><span class="codeLineContent_feaV"><span class="token plain">  </span><span class="token punctuation" style="color:#393A34">(</span><span class="token plain">circuit2</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"> obs_array_2</span><span class="token punctuation" style="color:#393A34">)</span><span class="token punctuation" style="color:#393A34">]</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"> precision</span><span class="token operator" style="color:#393A34">=</span><span class="token number" style="color:#36acaa">0.05</span><span class="token plain"></span></span><br></div><div class="token-line codeLine_lJS_" style="color:#393A34"><span class="codeLineNumber_Tfdd"></span><span class="codeLineContent_feaV"><span class="token plain">  </span><span class="token punctuation" style="color:#393A34">)</span></span><br></div></code></pre></div></div></div></div>
 </li>
 </ul>
@@ -289,7 +289,7 @@ Backend-urilor false. Parcurge tab-urile de mai jos pentru a vedea clasele afect
 <li class=""><code>fake_provider.FakeProviderForBackendV2</code></li>
 <li class=""><code>fake_provider.FakeProviderFactory</code></li>
 </ul></div></div></div>
-<p>Pentru a migra la noul path:</p>
+<p>Pentru a migra la noua cale:</p>
 <ol>
 <li class="">
 <p>Instalează <code>qiskit-ibm-runtime</code> <code>0.17.1</code> sau o versiune mai recentă:</p>
@@ -440,7 +440,7 @@ alternativă.</p>
 </li>
 </ul>
 <p>Motivul este că nu mai este posibil să injectezi obiecte Circuit în
-contextul builder-ului (consultă <a href="#injecting-circuit-gate-operations" class="">Injectarea operațiunilor gate de tip circuit</a>); aceste setări erau folosite pentru
+contextul builder-ului (consultă <a href="#injecting-circuit-gate-operations" class="">Injectarea operațiunilor de gate din circuit</a>); aceste setări erau folosite pentru
 conversia obiectelor injectate în reprezentări pulse.</p>
 <span id="pulse.library"></span>
 <h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="library">library<a href="#library" class="hash-link" aria-label="Link direct către library" title="Link direct către library" translate="no">​</a></h3>
@@ -534,8 +534,8 @@ generează un obiect <a href="https://docs.quantum.ibm.com/api/qiskit/qiskit.cir
 <p>Modulul <code>qiskit.quantum_info.synthesis</code> a fost mutat în diverse
 locații din codul sursă, în principal în <a href="https://docs.quantum.ibm.com/api/qiskit/synthesis" target="_blank" rel="noopener noreferrer" class=""><code>qiskit.synthesis</code></a>.</p>
 <table><thead><tr><th>Eliminat</th><th>Alternativă</th></tr></thead><tbody><tr><td><code>OneQubitEulerDecomposer</code></td><td><a href="https://docs.quantum.ibm.com/api/qiskit/qiskit.synthesis.OneQubitEulerDecomposer" target="_blank" rel="noopener noreferrer" class=""><code>qiskit.synthesis.one_qubit.OneQubitEulerDecomposer</code></a></td></tr><tr><td><code>TwoQubitBasisDecomposer</code></td><td><a href="https://docs.quantum.ibm.com/api/qiskit/qiskit.synthesis.TwoQubitBasisDecomposer" target="_blank" rel="noopener noreferrer" class=""><code>qiskit.synthesis.two_qubits.TwoQubitBasisDecomposer</code></a></td></tr><tr><td><code>XXDecomposer</code></td><td><a href="https://docs.quantum.ibm.com/api/qiskit/qiskit.synthesis.XXDecomposer" target="_blank" rel="noopener noreferrer" class=""><code>qiskit.synthesis.two_qubits.XXDecomposer</code></a></td></tr><tr><td><code>two_qubit_cnot_decompose</code></td><td><a href="https://docs.quantum.ibm.com/api/qiskit/synthesis#qiskit.synthesis.two_qubit_cnot_decompose" target="_blank" rel="noopener noreferrer" class=""><code>qiskit.synthesis.two_qubits.two_qubit_cnot_decompose</code></a></td></tr><tr><td><code>Quaternion</code></td><td><a href="https://docs.quantum.ibm.com/api/qiskit/qiskit.quantum_info.Quaternion" target="_blank" rel="noopener noreferrer" class=""><code>qiskit.quantum_info.Quaternion</code></a></td></tr></tbody></table>
-<p>Această mutare nu a afectat calea obișnuită de import a <code>Quaternion</code>, dar nu mai poți accesa
-modulul prin <code>qiskit.quantum_info.synthesis</code>.</p>
+<p>Această mutare nu a afectat calea obișnuită de import a <code>Quaternion</code>, dar nu o mai poți accesa
+prin <code>qiskit.quantum_info.synthesis</code>.</p>
 <p>În final, <code>cnot_rxx_decompose</code> a fost eliminat.</p>
 <span id="qiskit.test"></span>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="qiskittest">qiskit.test<a href="#qiskittest" class="hash-link" aria-label="Link direct către qiskit.test" title="Link direct către qiskit.test" translate="no">​</a></h2>
@@ -555,7 +555,7 @@ din această nouă locație. De exemplu:</p>
 <span id="jupyter"></span>
 <h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="jupyter">jupyter<a href="#jupyter" class="hash-link" aria-label="Link direct către jupyter" title="Link direct către jupyter" translate="no">​</a></h3>
 <p>Submodulul <code>qiskit.tools.jupyter</code> a fost eliminat deoarece funcționalitatea
-din acest modul este legată de pachetul moștenire <code>qiskit-ibmq-provider</code>, care nu mai
+din acest modul este legată de vechiul pachet <code>qiskit-ibmq-provider</code>, care nu mai
 este acceptat. De asemenea, suporta doar <code>BackendV1</code>, nu și interfața mai nouă
 <a href="https://docs.quantum.ibm.com/api/qiskit/qiskit.providers.BackendV2" target="_blank" rel="noopener noreferrer" class=""><code>BackendV2</code></a>.</p>
 <span id="monitor"></span>
