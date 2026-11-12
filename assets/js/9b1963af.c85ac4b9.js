@@ -1,1 +1,0 @@
-"use strict";(globalThis.webpackChunkdoqumentation=globalThis.webpackChunkdoqumentation||[]).push([[9603],{91616(a){a.exports=JSON.parse('{"name":"course-catalogue","id":"default"}')}}]);
